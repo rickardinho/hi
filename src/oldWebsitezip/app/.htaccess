@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^.*$ http://drdd2016.herokuapp.com [R=301]
+
+#!!#RewriteEngine On
+#!!#RewriteRule ^.*$ http://drdd2016.herokuapp.com [R=301]
+#!!#
+#!!##!!#
+#!!##!!#
+#!!##!!#RewriteEngine On
+#!!##!!#RewriteRule ^.*$ http://drdd2016.herokuapp.com [R=301]

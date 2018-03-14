@@ -1,0 +1,277 @@
+# Translation of Minnow in English (UK)
+# This file is distributed under the same license as the Minnow package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-03-15 15:19:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.1.0-alpha\n"
+"Project-Id-Version: Minnow\n"
+
+#. Theme Name of the plugin/theme
+msgid "Minnow"
+msgstr "Minnow"
+
+#. Description of the plugin/theme
+msgid "Minnow is designed to put your social presence front and center by displaying your social links menu prominently below the site title and logo, so readers can easily find you on your favorite social networks."
+msgstr "Minnow is designed to put your social presence front and centre by displaying your social links menu prominently below the site title and logo, so readers can easily find you on your favourite social networks."
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#: inc/template-tags.php:125
+msgid "All %s posts"
+msgstr "All %s posts"
+
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "% Comments"
+
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1 Comment"
+
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "Leave a comment"
+
+#: inc/template-tags.php:55
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+
+#: inc/template-tags.php:56
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:90
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:52
+msgid "Post navigation"
+msgstr "Post navigation"
+
+#: inc/template-tags.php:29
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:25
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Older posts"
+
+#: inc/template-tags.php:21
+msgid "Posts navigation"
+msgstr "Posts navigation"
+
+#: inc/extras.php:145
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: inc/extras.php:137
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#: inc/extras.php:133
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">says:</span>"
+
+#: inc/extras.php:60
+msgid "Page %s"
+msgstr "Page %s"
+
+#: header.php:43
+msgid "Menu"
+msgstr "Menu"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Open Sans Condensed, translate this to 'off'. Do not translate into your
+#. own language.
+#: functions.php:129
+msgctxt "Open Sans Condensed font: on or off"
+msgid "on"
+msgstr "on"
+
+#: header.php:22
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Open Sans, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:123
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:43
+msgid "Social Links"
+msgstr "Social Links"
+
+#: functions.php:78 header.php:39
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:42
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: footer.php:17
+msgid "Theme: %1$s by %2$s."
+msgstr "Theme: %1$s by %2$s."
+
+#: footer.php:15
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: footer.php:15
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#. translators: %s: Name of current post
+#: content.php:27
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-page.php:25 inc/extras.php:148 inc/template-tags.php:102
+msgid "Edit"
+msgstr "Edit"
+
+#: content-page.php:18 content-single.php:21 content.php:34
+msgid "Pages:"
+msgstr "Pages:"
+
+#: content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+
+#: content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: comments.php:48
+msgid "Reply"
+msgstr "Reply"
+
+#: comments.php:37 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Newer Comments &rarr;"
+
+#: comments.php:36 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Older Comments"
+
+#: comments.php:35 comments.php:55
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#: archive.php:66
+msgid "Archives"
+msgstr "Archives"
+
+#: archive.php:60
+msgid "Audios"
+msgstr "Audios"
+
+#: archive.php:63
+msgid "Chats"
+msgstr "Chats"
+
+#: archive.php:57
+msgid "Statuses"
+msgstr "Statuses"
+
+#: archive.php:54
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:51
+msgid "Quotes"
+msgstr "Quotes"
+
+#: archive.php:48
+msgid "Videos"
+msgstr "Videos"
+
+#: archive.php:45
+msgid "Images"
+msgstr "Images"
+
+#: archive.php:42
+msgid "Galleries"
+msgstr "Galleries"
+
+#: archive.php:39
+msgid "Asides"
+msgstr "Asides"
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:36
+msgid "Year: %s"
+msgstr "Year: %s"
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:30
+msgid "Day: %s"
+msgstr "Day: %s"
+
+#: archive.php:33
+msgid "Month: %s"
+msgstr "Month: %s"
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "It looks like nothing was found at this location. Maybe try a search?"
+
+#: archive.php:27
+msgid "Author: %s"
+msgstr "Author: %s"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! That page can&rsquo;t be found."
+
+#. Author URI of the plugin/theme
+msgid "https://wordpress.com/themes/"
+msgstr "https://en-gb.wordpress.com/themes/"
+
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.com/themes/minnow/"
+msgstr "https://wordpress.com/themes/minnow/"
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr "Automattic"

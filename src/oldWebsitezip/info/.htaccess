@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^.*$ http://www.spark-app.net [R=301]
+
