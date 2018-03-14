@@ -5,13 +5,8 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/home.js';
 import About from './components/about.js';
-import Download from './components/download.js';
+import Detail from './components/detail.js';
 import Help from './components/help.js';
-import Press from './components/press.js';
-import Contact from './components/contact.js';
-import Terms from './components/terms.js';
-import Privacy from './components/privacy.js';
-import Faq from './components/faq.js';
 import Navbar from './components/general/navbar.js';
 import Footer from './components/general/footer.js';
 import { store } from './init-store.js';
@@ -28,13 +23,9 @@ const Routes = () => {
 
         <Route exact path="/" component={ Home } />
         <Route path='/about' component={ About } />
-        <Route path='/download' component={ Download } />
+        <Route path='/detail' component={ Detail } />
         <Route path='/help' component={ Help } />
-        <Route path='/press' component={ Press } />
-        <Route path='/contact' component={ Contact } />
-        <Route path='/terms' component={ Terms } />
-        <Route path='/privacy' component={ Privacy } />
-        <Route path='/faq' component={ Faq } />
+
 
         <Footer />
 

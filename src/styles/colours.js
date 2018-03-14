@@ -4,6 +4,8 @@ const colours = {
   red: '#e02228',
   black: '#000000',
   blue: '#316AB3', // blue of tabbar
+  darkblue: '#316AB3',
+  lightblue: '#316AB3',
   blueWhat: '#424FA1', // blue of what
   purple: '#7D3E98',
   darkgray: '#404040',
@@ -11,6 +13,8 @@ const colours = {
   lightgray: 'lightgray',
   verylightgray: '#f7f7f7',
   orange: '#F58220',
+  lightyellow: '#F58220',
+  yellow: '#F58220',
   green: '#8DC744',
   what: '#424FA1',
   where: '#7D3E98',

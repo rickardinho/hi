@@ -24,18 +24,18 @@ const Navbar = () => {
                     </NavButton>
                 </Link>
 
-
-                <Link to="/about">
+                <Link to="/detail">
                     <NavButton>
 
                         <NavLabel>Farm Details</NavLabel>
                     </NavButton>
                 </Link>
 
-                <Link to="download">
+
+                <Link to="/about">
                     <NavButton>
 
-                        <NavLabel>Download</NavLabel>
+                        <NavLabel>About</NavLabel>
                     </NavButton>
                 </Link>
 
@@ -46,19 +46,7 @@ const Navbar = () => {
                     </NavButton>
                 </Link>
 
-                <Link to="press">
-                    <NavButton>
 
-                        <NavLabel>Press</NavLabel>
-                    </NavButton>
-                </Link>
-
-                <Link to="contact">
-                    <NavButton>
-
-                        <NavLabel>Contact</NavLabel>
-                    </NavButton>
-                </Link>
               </NavButtonWrapper>
 
               <BurgerWrapper>
