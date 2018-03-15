@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import ReactTable from 'react-table';
 import "react-table/react-table.css";
 import colours from './../../styles/colours';
+import Combo from './combo';
 
 const data = [
   {
