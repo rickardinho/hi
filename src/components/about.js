@@ -8,7 +8,7 @@ const About = () => (
   <div>
     <div className="About">
       <div className="About-header">
-        <H2>About Spark</H2>
+        <H2>About Happy Irrigator</H2>
       </div>
 
       <div>
