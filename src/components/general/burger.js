@@ -8,11 +8,25 @@ class BurgerMenu extends Component {
   render () {
     return (
       <Menu styles={ BurgerStyles } id={ "sidebar" } className={ "burger-menu" } right>
-        
+
         <Link to="/">
             <NavButton>
 
-                <NavLabel>Home</NavLabel>
+                <NavLabel>Farm Summary</NavLabel>
+            </NavButton>
+        </Link>
+
+        <Link to="detail">
+            <NavButton>
+
+                <NavLabel>Farm Details</NavLabel>
+            </NavButton>
+        </Link>
+
+        <Link to="help">
+            <NavButton>
+
+                <NavLabel>Help</NavLabel>
             </NavButton>
         </Link>
 
@@ -24,33 +38,7 @@ class BurgerMenu extends Component {
             </NavButton>
         </Link>
 
-        <Link to="download">
-            <NavButton>
 
-                <NavLabel>Download</NavLabel>
-            </NavButton>
-        </Link>
-
-        <Link to="help">
-            <NavButton>
-
-                <NavLabel>Help</NavLabel>
-            </NavButton>
-        </Link>
-
-        <Link to="press">
-            <NavButton>
-
-                <NavLabel>Press</NavLabel>
-            </NavButton>
-        </Link>
-
-        <Link to="contact">
-            <NavButton>
-
-                <NavLabel>Contact</NavLabel>
-            </NavButton>
-        </Link>
       </Menu>
     );
   }

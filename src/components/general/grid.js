@@ -7,16 +7,36 @@ import colours from './../../styles/colours';
 const data = [
   {
     date: '1 Jan',
-    rainfall: 90,
-    sunshine: 23
+    rainfall: 5,
+    sunshine: 4
   },{
     date: '2 Jan',
-    rainfall: 26,
-    sunshine: 23
+    rainfall: 2,
+    sunshine: 8
   },{
     date: '3 Jan',
-    rainfall: 40,
-    sunshine: 23
+    rainfall: 7,
+    sunshine: 2
+  },
+  ,{
+    date: '4 Jan',
+    rainfall: 3,
+    sunshine: 4
+  },
+  ,{
+    date: '5 Jan',
+    rainfall: 2,
+    sunshine: 7
+  },
+  ,{
+    date: '6 Jan',
+    rainfall: 1,
+    sunshine: 6
+  },
+  ,{
+    date: '7 Jan',
+    rainfall: 6,
+    sunshine: 4
   }
 ]
 
@@ -45,10 +65,10 @@ const columns = [
                 >
                   <div
                     style={{
-                      width: `${row.value}%`,
+                      width: `${row.value * 10}%`,
                       height: '100%',
-                      backgroundColor: row.value > 66 ? colours.darkblue
-                        : row.value > 33 ? colours.blue
+                      backgroundColor: row.value * 10 > 66 ? colours.darkblue
+                        : row.value * 10 > 33 ? colours.blue
                         : colours.lightblue,
                       borderRadius: '2px',
                       transition: 'all .2s ease-out'
@@ -58,7 +78,7 @@ const columns = [
               )
         },
         {
-          Header: 'Sunshine',
+          Header: 'Sunshine (hrs)',
           accessor: 'sunshine'
         },
         {
@@ -75,10 +95,10 @@ const columns = [
                 >
                   <div
                     style={{
-                      width: `${row.value}%`,
+                      width: `${row.value * 10}%`,
                       height: '100%',
-                      backgroundColor: row.value > 66 ? colours.orange
-                        : row.value > 33 ? colours.yellow
+                      backgroundColor: row.value * 10 > 66 ? colours.orange
+                        : row.value * 10 > 33 ? colours.yellow
                         : colours.lightyellow,
                       borderRadius: '2px',
                       transition: 'all .2s ease-out'
