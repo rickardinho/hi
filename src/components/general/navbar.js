@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BurgerMenu from './burger.js';
-import { NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, Logo, LogoName, LogoWrapper, BurgerWrapper } from './../../styles/styles';
+import { H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, Logo, LogoName, LogoWrapper, BurgerWrapper } from './../../styles/styles';
 import sparkIcon from './../../images/icons/sparkLogo.png';
 import sparkName from './../../images/spark2.png';
 
@@ -12,8 +12,8 @@ const Navbar = () => {
 
 
               <LogoWrapper>
-                <Logo src={sparkIcon} alt="HI Icon" height="50"/>
-                <LogoName src={sparkName} alt="Happy Irrigator" height="40"/>
+                <H2>Happy Irrigator</H2>
+                <H4>v2.0</H4>
               </LogoWrapper>
 
               <NavButtonWrapper>
