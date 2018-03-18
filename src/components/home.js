@@ -14,6 +14,16 @@ import message from './../images/1-message.jpg';
 import Grid from './general/grid.js';
 import Carousel from './general/carousel.js';
 
+const data = [
+  {"date":"1 Jan", "rainfall": 4, "sun": 6
+},
+  {"date":"2 Jan", "rainfall": 6, "sun": 3
+    }
+];              
+
+const table = data.map((item) => 
+     <div><H2>item.date</H2><H2>item.date</H2></div>;
+
 const Home = () => (
   <div>
     <div className="Home">
@@ -24,6 +34,9 @@ const Home = () => (
     </div>
 
     <div>
+      {table}
+  
+      
 
       <Grid />
 
