@@ -12,17 +12,8 @@ import album from './../images/3album.jpg';
 import resultVote from './../images/2-result-vote.jpg';
 import message from './../images/1-message.jpg';
 import Grid from './general/grid.js';
-import Carousel from './general/carousel.js';
+import Summary from './summary.js';;
 
-const data = [
-  {"date":"1 Jan", "rainfall": 4, "sun": 6
-},
-  {"date":"2 Jan", "rainfall": 6, "sun": 3
-    }
-];              
-
-const table = data.map((item) => 
-     <div><H2>item.date</H2><H2>item.date</H2></div>;
 
 const Home = () => (
   <div>
@@ -34,11 +25,11 @@ const Home = () => (
     </div>
 
     <div>
-      {table}
-  
-      
+      <Summary />
 
-      <Grid />
+
+
+      
 
     </div>
 

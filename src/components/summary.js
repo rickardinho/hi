@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import colours from './../../styles/colours';
-import Combo from './combo';
+import Combo from './general/combo';
+import TableRow from './tableRow';
+import HeaderRow from './headerRow';
+import { MainWrapper } from './../styles/styles';
 
 const data = [
   {
@@ -39,31 +41,32 @@ const data = [
   }
 ]
 
-    const Feed  = ({ allEvents, notifications, isFetching, handleUpdateNotification, displaySome, displayAll, feedIsFiltered, isShowHosting }) => {
+const Summary  = () => {
 
-    let mappedNotifications = notifications.map((data, i) => {
-        return (
-            <Notification
-                key={ i }
-                index={ i }
-                viewed={ data.viewed }
-            />
-        );
-    });
+  let mappedTable = data.map((data, i) => {
+      return (
+          <TableRow
+              key={ i }
+              index={ i }
+              date={ data.date }
+              rainfall={ data.rainfall }
+              sunshine={ data.sunshine }
+          />
+      );
+  });
 
-    return (
-        <div>
-       
+  return (
+      <MainWrapper>
+          <HeaderRow/>
 
-            <div className="container feed">
-    
-            {
-                mappedNotifications
-            }
-            </div>
 
-        </div>
-    );
+          {
+              mappedTable
+          }
+
+
+      </MainWrapper>
+  );
 };
 
-export default Feed;
+export default Summary;
