@@ -12,7 +12,8 @@ import album from './../images/3album.jpg';
 import resultVote from './../images/2-result-vote.jpg';
 import message from './../images/1-message.jpg';
 import Grid from './general/grid.js';
-import Carousel from './general/carousel.js';
+import Summary from './summary.js';;
+
 
 const Home = () => (
   <div>
@@ -24,8 +25,11 @@ const Home = () => (
     </div>
 
     <div>
+      <Summary />
 
-      <Grid />
+
+
+      
 
     </div>
 

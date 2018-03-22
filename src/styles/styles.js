@@ -7,6 +7,60 @@ const fonts = {
   thin: 500
 };
 
+export const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background: ${colours.blue};
+
+`;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: ${colours.offWhite};
+
+`;
+
+export const BarBackground = styled.div`
+  height: 30px;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: ${colours.lightgray};
+  margin-left: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+
+`;
+export const BlueBar = styled.div`
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: ${props => props.value * 10 > 66 ? colours.lightgray : props.value * 10 > 33 ? colours.blue : colours.lightblue};
+  width: ${props => props.value * 10}%;
+  border-radius: 5px;
+  transition: 'all .2s ease-out';
+
+`;
+export const YellowBar = styled.div`
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: ${props => props.value * 10 > 66 ? colours.lightgray : props.value * 10 > 33 ? colours.yellow : colours.lightyellow};
+  width: ${props => props.value * 10}%;
+  border-radius: 5px;
+  transition: 'all .2s ease-out';
+
+`;
+
 export const Logo = styled.img`
 
 
