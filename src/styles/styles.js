@@ -24,6 +24,30 @@ export const Row = styled.div`
 
 `;
 
+export const Div1 = styled.div`
+  display: flex;
+  flex: 1;
+  min-Width: 10%;
+  background: ${colours.purple};
+
+`;
+
+export const Div2 = styled.div`
+  display: flex;
+  flex: 2;
+  min-Width: 20%;
+  background: ${colours.purple};
+
+`;
+
+export const Div3 = styled.div`
+  display: flex;
+  flex: 3;
+  min-Width: 30%;
+  background: ${colours.purple};
+
+`;
+
 export const BarBackground = styled.div`
   height: 30px;
   width: 100%;
