@@ -24,27 +24,62 @@ export const Row = styled.div`
 
 `;
 
+export const DivRainfall = styled.div`
+  display: flex;
+  flex: 0.5;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.purple};
+  min-width: 70px;
+
+`;
+
 export const Div1 = styled.div`
   display: flex;
-  flex: 1;
-  min-Width: 10%;
+  flex: 0.5;
+  justify-content: center;
+  align-items: center;
   background: ${colours.purple};
+  min-width: 70px;
 
 `;
 
 export const Div2 = styled.div`
   display: flex;
   flex: 2;
-  min-Width: 20%;
-  background: ${colours.purple};
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  background: ${colours.what};
+
 
 `;
 
 export const Div3 = styled.div`
   display: flex;
   flex: 3;
-  min-Width: 30%;
-  background: ${colours.purple};
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 20px;
+  background: ${colours.red};
+
+
+`;
+
+export const Div4 = styled.div`
+  display: flex;
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  background: ${colours.green};
+  max-width: 300px;
+
 
 `;
 
@@ -245,7 +280,7 @@ export const H4 = styled.h4`
   text-align: center;
   margin: 15px;
   color: ${colours.blue};
-  font-size: 15px;
+  font-size: 12px;
   line-height: 22px;
   font-weight: 500;
 
