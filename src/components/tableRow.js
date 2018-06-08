@@ -5,11 +5,15 @@ import Combo from './general/combo';
 import { Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 
-const TableRow  = ({ key, index, date, rainfall, sunshine }) => {
+const TableRow  = ({ key, index, date, raing1, rainfall, sunshine }) => {
 
   return (
       <Row>
-
+          
+          <Div1>
+             <Combo value={raing1} />
+          </Div1>
+          
           <Div1>
             <H4>{date}</H4>
           </Div1>
