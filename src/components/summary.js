@@ -22,26 +22,22 @@ const data = [
     rainfall: 7,
     sunshine: 2,
     raing1: 1
-  },
-  ,{
+  },{
     date: '4 Jan',
     rainfall: 3,
     sunshine: 4,
     raing1: 1
-  },
-  ,{
+  },{
     date: '5 Jan',
     rainfall: 2,
     sunshine: 7,
     raing1: 4
-  },
-  ,{
+  },{
     date: '6 Jan',
     rainfall: 1,
     sunshine: 6,
     raing1: 6
-  },
-  ,{
+  },{
     date: '7 Jan',
     rainfall: 6,
     sunshine: 4,
