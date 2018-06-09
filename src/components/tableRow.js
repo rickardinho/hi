@@ -5,8 +5,22 @@ import Combo from './general/combo';
 import { Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 
-const TableRow  = ({ key, index, date, raing1, rainfall, sunshine }) => {
 
+
+const TableRow  = ({ key, index, date, raingGaugeData, rainfall, sunshine }) => {
+
+    let mappedRainGaugeData = data.map((rainGaugeData, i) => {
+      return (
+           <Div1>
+             <Combo value={rainGaugeData[i]} />
+          </Div1>
+    
+         
+
+      );
+    });
+  
+  
   return (
       <Row>
           
@@ -16,14 +30,8 @@ const TableRow  = ({ key, index, date, raing1, rainfall, sunshine }) => {
             <H4>{date}</H4>
           </Div1>
     
-          <Div1>
-             <Combo value={raing1} />
-          </Div1>
+         {mappedRainGaugeData}
     
-          <Div1>
-             <Combo value={raing1} />
-          </Div1>
-
           <Div3>
 
             <Combo value={rainfall} />
