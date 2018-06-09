@@ -11,37 +11,37 @@ const data = [
     date: '1 Jan',
     rainfall: 5,
     sunshine: 4,
-    raing1: 1
+    rainGaugeData: [ 1, 2, 3]
   },{
     date: '2 Jan',
     rainfall: 2,
     sunshine: 8,
-    raing1: 1
+    rainGaugeData: [ 1, 2, 3]
   },{
     date: '3 Jan',
     rainfall: 7,
     sunshine: 2,
-    raing1: 1
+    rainGaugeData: [ 1, 2, 3]
   },{
     date: '4 Jan',
     rainfall: 3,
     sunshine: 4,
-    raing1: 1
+    rainGaugeData: [ 1, 2, 3]
   },{
     date: '5 Jan',
     rainfall: 2,
     sunshine: 7,
-    raing1: 4
+    rainGaugeData: [ 1, 2, 3]
   },{
     date: '6 Jan',
     rainfall: 1,
     sunshine: 6,
-    raing1: 6
+    rainGaugeData: [ 1, 2, 3]
   },{
     date: '7 Jan',
     rainfall: 6,
     sunshine: 4,
-    raing1: 4
+    rainGaugeData: [ 1, 2, 3]
   }
 ]
 
@@ -55,7 +55,7 @@ const Summary  = () => {
               date={ data.date }
               rainfall={ data.rainfall }
               sunshine={ data.sunshine }
-              raing1={ data.raing1 }
+              rainGaugeData={ data.rainGaugeData }
           />
       );
   });
