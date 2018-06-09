@@ -12,7 +12,7 @@ const TableRow  = ({ key, index, date, rainGaugeData, rainfall, sunshine }) => {
     let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
            <Div1>
-             <Combo value={rainGauge[i]} />
+             <Combo value={rainGauge} />
           </Div1>
     
          
