@@ -7,12 +7,12 @@ import { Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, 
 
 
 
-const TableRow  = ({ key, index, date, raingGaugeData, rainfall, sunshine }) => {
+const TableRow  = ({ key, index, date, rainGaugeData, rainfall, sunshine }) => {
 
-    let mappedRainGaugeData = data.map((rainGaugeData, i) => {
+    let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
            <Div1>
-             <Combo value={rainGaugeData[i]} />
+             <Combo value={rainGauge[i]} />
           </Div1>
     
          
