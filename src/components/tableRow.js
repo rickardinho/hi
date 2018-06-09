@@ -10,12 +10,18 @@ const TableRow  = ({ key, index, date, raing1, rainfall, sunshine }) => {
   return (
       <Row>
           
-          <Div1>
-             <Combo value={raing1} />
-          </Div1>
+          
           
           <Div1>
             <H4>{date}</H4>
+          </Div1>
+    
+          <Div1>
+             <Combo value={raing1} />
+          </Div1>
+    
+          <Div1>
+             <Combo value={raing1} />
           </Div1>
 
           <Div3>
