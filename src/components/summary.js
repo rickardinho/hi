@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Combo from './general/combo';
 import TableRow from './tableRow';
-import HeaderRow from './headerRow';
+// import HeaderRow from './headerRow
 import HeaderRow2 from './headerRow2';
 import { MainWrapper } from './../styles/styles';
 
@@ -62,7 +62,7 @@ const Summary  = () => {
 
   return (
       <MainWrapper>
-          <HeaderRow/>
+          
           <HeaderRow2/>
 
 
