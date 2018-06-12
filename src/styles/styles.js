@@ -26,11 +26,11 @@ export const Row = styled.div`
 
 export const Input = styled.input`
   display: flex;
-  flex: 3;
+  flex: 0.5;
   justify-content: center;
   align-items: center;
   margin-left: 5px;
-  margin-right: 20px;
+  margin-right: 5px;
   background: ${colours.green};
 `;
 
