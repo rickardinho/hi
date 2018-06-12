@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/home.js';
 import About from './components/about.js';
-import Detail from './components/detail.js';
+import FieldDetails from './components/fieldDetails.js';
 import Help from './components/help.js';
 import Navbar from './components/general/navbar.js';
 import Footer from './components/general/footer.js';
@@ -23,7 +23,7 @@ const Routes = () => {
 
         <Route exact path="/" component={ Home } />
         <Route path='/about' component={ About } />
-        <Route path='/detail' component={ Detail } />
+        <Route path='/fieldDetails' component={ FieldDetails } />
         <Route path='/help' component={ Help } />
 
 

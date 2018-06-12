@@ -21,17 +21,23 @@ export const Row = styled.div`
   flex-wrap: nowrap;
   justify-content: space-around;
   background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: pink;
+  border-style: solid;
+
 
 `;
 
 export const Input = styled.input`
-  display: flex;
-  flex: 0.5;
+
   justify-content: center;
   align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  background: ${colours.green};
+  width: 100%;
+  height: 100%;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
 `;
 
 export const DivRainfall = styled.div`
@@ -39,7 +45,10 @@ export const DivRainfall = styled.div`
   flex: 0.5;
   justify-content: center;
   align-items: center;
-  background: ${colours.purple};
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: orange;
+  border-style: solid;
   min-width: 70px;
 
 `;
@@ -49,7 +58,10 @@ export const Div1 = styled.div`
   flex: 0.5;
   justify-content: center;
   align-items: center;
-  background: ${colours.purple};
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: verydarkgreen;
+  border-style: solid;
   min-width: 70px;
 
 `;
@@ -60,7 +72,10 @@ export const Div2 = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  background: ${colours.what};
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: darkgreen;
+  border-style: solid;
 
 
 `;
@@ -70,9 +85,10 @@ export const Div3 = styled.div`
   flex: 3;
   justify-content: center;
   align-items: center;
-  margin-left: 5px;
-  margin-right: 20px;
-  background: ${colours.red};
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: green;
+  border-style: solid;
 
 
 `;
@@ -84,17 +100,17 @@ export const Div4 = styled.div`
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
+  background: ${colours.offWhite};
   border-width: 1px;
-  border-color: red;
+  border-color: lightgreen;
   border-style: solid;
-  background: ${colours.green};
-  max-width: 300px;
+  
 
 
 `;
 
 export const BarBackground = styled.div`
-  height: 30px;
+  height: 20px;
   width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;

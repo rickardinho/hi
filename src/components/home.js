@@ -17,19 +17,14 @@ import Summary from './summary.js';;
 
 const Home = () => (
   <div>
-    <div className="Home">
-      <div className="Home-header">
-        <H2>Farm Summary</H2>
-      </div>
-
-    </div>
+    
 
     <div>
       <Summary />
 
 
 
-      
+
 
     </div>
 

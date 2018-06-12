@@ -7,39 +7,40 @@ import { Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, 
 
 
 
-const TableRow  = ({ key, index, date, rainGaugeData, rainfall, sunshine }) => {
+const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comments }) => {
 
     let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
            <Div1>
              <Input value={rainGauge} />
           </Div1>
-    
-         
+
+
 
       );
     });
-  
-  
+
+
   return (
       <Row>
-          
-          
-          
+
+
+
           <Div1>
             <H4>{date}</H4>
           </Div1>
-    
+
          {mappedRainGaugeData}
-    
+
           <Div3>
 
-            <Combo value={rainfall} />
+            <Combo value={wind} />
 
 
             <Div4>
               <BarBackground>
-                <BlueBar value={rainfall} />
+                <YellowBar value={sunshine} />
+
               </BarBackground>
             </Div4>
           </Div3>
@@ -50,9 +51,17 @@ const TableRow  = ({ key, index, date, rainGaugeData, rainfall, sunshine }) => {
 
             <Div4>
               <BarBackground>
-                <YellowBar value={sunshine} />
+                <BlueBar value={wind} />
               </BarBackground>
             </Div4>
+          </Div3>
+
+          <Div1>
+            <H4>{pwl}</H4>
+          </Div1>
+
+          <Div3>
+            <H4>{comments}</H4>
           </Div3>
 
       </Row>

@@ -2,11 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import Combo from './general/combo';
 import TableRow from './tableRow';
-// import HeaderRow from './headerRow
-import HeaderRow2 from './headerRow2';
-import { MainWrapper, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { MainWrapper } from './../styles/styles';
+import { Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
-const rainGaugeNames = [ 'Raingauge East', 'Raingauge North', 'Raingauge West', 'Raingauge South' ]
 
 const data = [
   {
@@ -61,7 +59,45 @@ const data = [
   }
 ]
 
-const Summary  = () => {
+const HeaderRow  = ({ }) => {
+
+  return (
+      <Row>
+
+        <Div1>
+          <H4>Date</H4>
+        </Div1>
+
+        <Div1>
+          <H4>Crop & Weed cover (%)</H4>
+        </Div1>
+
+        <Div1>
+          <H4>Adjusted rainfall (mm)</H4>
+        </Div1>
+
+        <Div1>
+          <H4>Irrigation (mm)</H4>
+        </Div1>
+
+        <Div1>
+          <H4>Soil moisture deficit (mm)</H4>
+        </Div1>
+
+        <Div1>
+          <H4>Drainage (mm)</H4>
+        </Div1>
+
+        <Div3>
+          <H4>Comments</H4>
+        </Div3>
+
+      </Row>
+  );
+};
+
+
+const FieldDetails  = () => {
 
   let mappedTable = data.map((data, i) => {
       return (
@@ -79,21 +115,21 @@ const Summary  = () => {
   });
 
   return (
-      <MainWrapper>
-        <Div1>
-          <H2>Farm Summary</H2>
-        </Div1>
 
-        <HeaderRow2 rainGaugeNames={ rainGaugeNames }/>
+    <MainWrapper>
+      <Div1>
+        <H2>Field Details</H2>
+      </Div1>
+
+      <HeaderRow />
+
+      {
+          mappedTable
+      }
 
 
-        {
-            mappedTable
-        }
-
-
-      </MainWrapper>
+    </MainWrapper>
   );
 };
 
-export default Summary;
+export default FieldDetails;
