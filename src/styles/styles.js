@@ -34,15 +34,6 @@ export const Input = styled.input`
   background: ${colours.green};
 `;
 
-export const Div3 = styled.div`
-  display: flex;
-  flex: 3;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 20px;
-  background: ${colours.red};
-`;
 export const DivRainfall = styled.div`
   display: flex;
   flex: 0.5;
