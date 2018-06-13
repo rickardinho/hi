@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+import '@trendmicro/react-dropdown/dist/react-dropdown.css';
+import Dropdown, {
+    DropdownToggle,
+    DropdownMenu,
+    DropdownMenuWrapper,
+    MenuItem,
+    DropdownButton
+} from '@trendmicro/react-dropdown';
 import colours from './colours';
 
 const fonts = {
@@ -7,11 +16,46 @@ const fonts = {
   thin: 500
 };
 
+// dropdowns
+
+export const CustomDropdownMenu = styled(Dropdown.Menu)`
+    padding: 2px 0;
+`;
+CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
+CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
+
+export const CustomMenuItem = styled(MenuItem)`
+
+`;
+CustomMenuItem.propTypes = MenuItem.propTypes;
+CustomMenuItem.defaultProps = MenuItem.defaultProps;
+
+export const CustomDropdownToggle = styled(Dropdown.Toggle)`
+    padding: 2px 0;
+`;
+CustomDropdownToggle.propTypes = Dropdown.Toggle.propTypes;
+CustomDropdownToggle.defaultProps = Dropdown.Toggle.defaultProps;
+
+// Main
+
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   background: ${colours.blue};
+
+`;
+
+export const Block = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: purple;
+  border-style: solid;
+
 
 `;
 
@@ -42,16 +86,17 @@ export const RowWrapped = styled.div`
 `;
 
 export const Input = styled.input`
+  font-family: ${fonts.default};
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background: ${colours.offWhite};
+  margin: 0px;
+  background: ${colours.white};
+  font-size: 10px;
+  line-height: 22px;
+  font-weight: 500;
   border-width: 1px;
   border-color: red;
   border-style: solid;
-  min-width: 20px;
+  width: 100%;
 `;
 
 export const DivRainfall = styled.div`
@@ -77,6 +122,7 @@ export const Div1 = styled.div`
   border-color: verydarkgreen;
   border-style: solid;
   min-width: ${props => props.minWidth}px;
+  max-width: ${props => props.maxWidth}px;
 
 `;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import colours from './../styles/colours';
 import Combo from './general/combo';
-import { Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { Block, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 
 
@@ -24,39 +24,21 @@ const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comme
   return (
       <Row>
 
-
-
-          <Div1 min-width={70}>
+          <Div1 minWidth='30' maxWidth='100'>
             <H4>{date}</H4>
           </Div1>
 
-         {mappedRainGaugeData}
+          {mappedRainGaugeData}
 
-          <Div3>
-
+          <Div1 minWidth='30' maxWidth='100'>
             <Combo value={wind} />
+          </Div1>
 
-
-            <Div4>
-              <BarBackground>
-                <YellowBar value={sunshine} />
-
-              </BarBackground>
-            </Div4>
-          </Div3>
-
-          <Div3>
-
+          <Div1 minWidth='30' maxWidth='100'>
             <Combo value={sunshine} />
+          </Div1>
 
-            <Div4>
-              <BarBackground>
-                <BlueBar value={wind} />
-              </BarBackground>
-            </Div4>
-          </Div3>
-
-          <Div1>
+          <Div1 minWidth='30' maxWidth='100'>
             <H4>{pwl}</H4>
           </Div1>
 
@@ -69,3 +51,16 @@ const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comme
 };
 
 export default TableRow;
+
+// <Div4>
+//   <BarBackground>
+//     <YellowBar value={sunshine} />
+//
+//   </BarBackground>
+// </Div4>
+
+// <Div4>
+//   <BarBackground>
+//     <BlueBar value={wind} />
+//   </BarBackground>
+// </Div4>
