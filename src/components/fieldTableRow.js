@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import colours from './../styles/colours';
 import Combo from './general/combo';
-import { Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { CellLg, CellSm, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 
 const FieldTableRow  = ({ key, index, date, cropCover, adjRainfall, irrigation, smd, drainage, comments }) => {
@@ -10,33 +10,33 @@ const FieldTableRow  = ({ key, index, date, cropCover, adjRainfall, irrigation, 
   return (
       <Row>
 
-          <Div1>
+          <CellSm>
             <H4>{date}</H4>
-          </Div1>
+          </CellSm>
 
-          <Div1>
+          <CellSm>
             <Input value={cropCover} />
-          </Div1>
+          </CellSm>
 
-          <Div1>
+          <CellSm>
             <Input value={adjRainfall} />
-          </Div1>
+          </CellSm>
 
-          <Div1>
+          <CellSm>
             <Input value={irrigation} />
-          </Div1>
+          </CellSm>
 
-          <Div1>
-            <Input value={smd} />
-          </Div1>
+          <CellSm>
+            <H4>{smd}</H4>
+          </CellSm>
 
-          <Div1>
+          <CellSm>
             <Input value={drainage} />
-          </Div1>
+          </CellSm>
 
-          <Div3>
-            <H4>{comments}</H4>
-          </Div3>
+          <CellLg>
+            <Input value={comments} />
+          </CellLg>
 
       </Row>
   );

@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import Combo from './general/combo';
 import FieldTableRow from './fieldTableRow';
+import HeaderRow from './detailsHeaderRow';
 import { MainWrapper } from './../styles/styles';
-import { RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 
 const data = [
@@ -69,11 +70,10 @@ const data = [
 const InfoRow  = ({ rainGaugeName, area, fieldName, crop, soil }) => {
 
   return (
-      <Row>
-
+      <RowWrapped>
 
           <RowWrapped>
-            <div><H4>Rainguage: </H4><Pcentered>{rainGaugeName}</Pcentered></div>
+            <div><H4>Raingauge: </H4><Pcentered>{rainGaugeName}</Pcentered></div>
             <div><H4>Area: </H4><Pcentered>{area}</Pcentered></div>
           </RowWrapped>
 
@@ -83,47 +83,7 @@ const InfoRow  = ({ rainGaugeName, area, fieldName, crop, soil }) => {
             <div><H4>Soil:</H4><Pcentered>{soil}</Pcentered></div>
           </RowWrapped>
 
-
-
-      </Row>
-  );
-};
-
-
-const HeaderRow  = ({ }) => {
-
-  return (
-      <Row>
-
-        <Div1>
-          <H4>Date</H4>
-        </Div1>
-
-        <Div1>
-          <H4>Crop & Weed cover (%)</H4>
-        </Div1>
-
-        <Div1>
-          <H4>Adjusted rainfall (mm)</H4>
-        </Div1>
-
-        <Div1>
-          <H4>Irrigation (mm)</H4>
-        </Div1>
-
-        <Div1>
-          <H4>Soil moisture deficit (mm)</H4>
-        </Div1>
-
-        <Div1>
-          <H4>Drainage (mm)</H4>
-        </Div1>
-
-        <Div3>
-          <H4>Comments</H4>
-        </Div3>
-
-      </Row>
+      </RowWrapped>
   );
 };
 
@@ -149,18 +109,20 @@ const FieldDetails  = () => {
   return (
 
     <MainWrapper>
-      <Div1>
-        <H2>Field Details</H2>
-      </Div1>
+      <PageTitleDiv>
+        <H3>Field & Crop Details</H3>
+      </PageTitleDiv>
+      <MainWrapper>
 
-      <InfoRow rainGaugeName='South' area='9.3 ha' fieldName='Dusty Field' crop='Potatoes, Desiree' soil='fine sandy loam' />
+        <InfoRow rainGaugeName='South' area='9.3 ha' fieldName='Dusty Field' crop='Potatoes, Desiree' soil='fine sandy loam' />
 
-      <HeaderRow />
+        <HeaderRow />
 
-      {
-          mappedTable
-      }
+        {
+            mappedTable
+        }
 
+      </MainWrapper>
 
     </MainWrapper>
   );

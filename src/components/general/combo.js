@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+import '@trendmicro/react-dropdown/dist/react-dropdown.css';
 import Select from 'react-select';
-import Dropdown from 'react-dropdown';
+import Dropdown, {
+    DropdownToggle,
+    DropdownMenu,
+    DropdownMenuWrapper,
+    MenuItem,
+    DropdownButton
+} from '@trendmicro/react-dropdown';
 import 'react-dropdown/style.css';
 import 'react-select/dist/react-select.css';
+import { CustomDropdown, CustomDropdownMenu, CustomDropdownToggle, CustomMenuItem } from './../../styles/styles';
+
 
 export default class Combo extends Component {
 
@@ -22,8 +32,24 @@ export default class Combo extends Component {
     ];
     const defaultOption = options[this.props.value - 1];
 
+    let menuItems = options.map((option, i) => {
+        return (
+            <CustomMenuItem eventKey={ i }>{option.value}</CustomMenuItem>
+        );
+    });
+
     return (
-      <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="-" />
+
+      <CustomDropdown>
+        <CustomDropdownToggle btnSize="sm" btnStyle="flat">
+            -
+        </CustomDropdownToggle>
+        <CustomDropdownMenu>
+            {menuItems}
+        </CustomDropdownMenu>
+      </CustomDropdown>
+
+
 
     );
   }

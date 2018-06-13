@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+import '@trendmicro/react-dropdown/dist/react-dropdown.css';
+import Dropdown, {
+    DropdownToggle,
+    DropdownMenu,
+    DropdownMenuWrapper,
+    MenuItem,
+    DropdownButton
+} from '@trendmicro/react-dropdown';
 import colours from './colours';
 
 const fonts = {
@@ -7,11 +16,77 @@ const fonts = {
   thin: 500
 };
 
+// dropdowns
+
+export const CustomDropdown = styled(Dropdown)`
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+`;
+CustomDropdown.propTypes = Dropdown.propTypes;
+CustomDropdown.defaultProps = Dropdown.defaultProps;
+
+export const CustomDropdownMenu = styled(Dropdown.Menu)`
+
+    width: 100%;
+
+`;
+CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
+CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
+
+export const CustomMenuItem = styled(MenuItem)`
+
+`;
+CustomMenuItem.propTypes = MenuItem.propTypes;
+CustomMenuItem.defaultProps = MenuItem.defaultProps;
+
+export const CustomDropdownToggle = styled(Dropdown.Toggle)`
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+`;
+CustomDropdownToggle.propTypes = Dropdown.Toggle.propTypes;
+CustomDropdownToggle.defaultProps = Dropdown.Toggle.defaultProps;
+
+
+// Main
+
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: ${colours.blue};
+
+`;
+
+export const PageTitleDiv = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: ${colours.lightgray};
+  border-width: 0px;
+  border-color: ${colours.lightgray};
+  border-style: solid;
+
+`;
+
+export const Block = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: ${colours.offWhite};
+  border-width: 2px;
+  border-color: ${colours.lightgray};
+  border-style: solid;
+  min-width: 40px;
+  max-width: 80px;
+
+
 
 `;
 
@@ -21,7 +96,7 @@ export const Row = styled.div`
   flex-wrap: nowrap;
   justify-content: space-around;
   background: ${colours.offWhite};
-  border-width: 1px;
+  border-width: 0px;
   border-color: pink;
   border-style: solid;
 
@@ -33,25 +108,54 @@ export const RowWrapped = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background: ${colours.offWhite};
-  border-width: 1px;
+  background: ${colours.verylightgray};
+  border-width: 0px;
   border-color: blue;
   border-style: solid;
 
 
 `;
 
-export const Input = styled.input`
-  text-align: center;
+export const CellSm = styled.div`
+  display: flex;
+  width: 10%;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   background: ${colours.offWhite};
   border-width: 1px;
-  border-color: red;
+  border-color: ${colours.verylightgray};
   border-style: solid;
-  min-width: 20px;
+  min-width: 40px;
+  max-width: 80px;
+
+`;
+
+export const CellLg = styled.div`
+  display: flex;
+  flex-grow: 1;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: ${colours.verylightgray};
+  border-style: solid;
+
+
+`;
+
+export const Input = styled.input`
+  font-family: ${fonts.default};
+  text-align: center;
+  margin: 0px;
+  background: ${colours.white};
+  font-size: 10px;
+  line-height: 22px;
+  font-weight: 500;
+  border-width: 1px;
+  border-color: ${colours.lightgray};
+  border-style: solid;
+  width: 100%;
 `;
 
 export const DivRainfall = styled.div`
@@ -77,6 +181,7 @@ export const Div1 = styled.div`
   border-color: verydarkgreen;
   border-style: solid;
   min-width: ${props => props.minWidth}px;
+  max-width: ${props => props.maxWidth}px;
 
 `;
 
@@ -307,6 +412,7 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   font-family: ${fonts.default};
   text-align: center;
+  margin: 0px;
   color: ${colours.blue};
   font-size: 18px;
   line-height: 22px;
@@ -318,7 +424,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   font-family: ${fonts.default};
   text-align: center;
-  margin: 5px;
+  margin: 0px;
   color: ${colours.blue};
   font-size: 10px;
   line-height: 22px;
@@ -331,7 +437,7 @@ export const P = styled.p`
   font-family: ${fonts.default};
   text-align: justify;
   margin: 10px;
-  color: ${colours.blue};
+  color: ${colours.heading};
   font-size: 10px;
   line-height: 22px;
   font-weight: 300;
@@ -394,7 +500,7 @@ export const Wrapper = styled.section`
 
 export const NavButton = styled.button`
   font-family: ${fonts.default};
-  font-size: 1em;
+  font-size: 12px;
   font-weight: ${fonts.thin};
   text-align: center;
   color: ${colours.blue};

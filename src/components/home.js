@@ -17,15 +17,10 @@ import Summary from './summary.js';;
 
 const Home = () => (
   <div>
-    
+
 
     <div>
       <Summary />
-
-
-
-
-
     </div>
 
 
