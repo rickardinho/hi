@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/home.js';
 import About from './components/about.js';
+import FarmInfo from './components/farmInfo.js';
 import FieldDetails from './components/fieldDetails.js';
 import Help from './components/help.js';
 import Navbar from './components/general/navbar.js';
@@ -23,7 +24,9 @@ const Routes = () => {
 
         <Route exact path="/" component={ Home } />
         <Route path='/about' component={ About } />
+        <Route path='/farmInfo' component={ FarmInfo } />
         <Route path='/fieldDetails' component={ FieldDetails } />
+
         <Route path='/help' component={ Help } />
 
 

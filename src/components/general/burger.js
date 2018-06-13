@@ -11,21 +11,24 @@ class BurgerMenu extends Component {
 
         <Link to="/">
             <NavButton>
-
                 <NavLabel>Farm Summary</NavLabel>
+            </NavButton>
+        </Link>
+
+        <Link to="farmInfo">
+            <NavButton>
+                <NavLabel>Farm Information</NavLabel>
             </NavButton>
         </Link>
 
         <Link to="fieldDetails">
             <NavButton>
-
-                <NavLabel>Farm Details</NavLabel>
+                <NavLabel>Field & Crop Details</NavLabel>
             </NavButton>
         </Link>
 
         <Link to="help">
             <NavButton>
-
                 <NavLabel>Help</NavLabel>
             </NavButton>
         </Link>
@@ -33,7 +36,6 @@ class BurgerMenu extends Component {
 
         <Link to="/about">
             <NavButton>
-
                 <NavLabel>About</NavLabel>
             </NavButton>
         </Link>

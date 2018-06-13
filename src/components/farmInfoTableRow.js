@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import colours from './../styles/colours';
 import Combo from './general/combo';
-import { Block, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { CellSm, CellLg, Block, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 
 
@@ -11,9 +11,9 @@ const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comme
 
     let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
-          <Div1>
+          <CellSm>
             <Input value={rainGauge} />
-          </Div1>
+          </CellSm>
 
 
 
@@ -24,27 +24,27 @@ const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comme
   return (
       <Row>
 
-          <Div1 minWidth='30' maxWidth='100'>
+          <CellSm>
             <H4>{date}</H4>
-          </Div1>
+          </CellSm>
 
           {mappedRainGaugeData}
 
-          <Div1 minWidth='30' maxWidth='100'>
+          <CellSm>
             <Combo value={wind} />
-          </Div1>
+          </CellSm>
 
-          <Div1 minWidth='30' maxWidth='100'>
+          <CellSm>
             <Combo value={sunshine} />
-          </Div1>
+          </CellSm>
 
-          <Div1 minWidth='30' maxWidth='100'>
+          <CellSm>
             <H4>{pwl}</H4>
-          </Div1>
+          </CellSm>
 
-          <Div3>
-            <H4>{comments}</H4>
-          </Div3>
+          <CellLg>
+            <Input value={comments} />
+          </CellLg>
 
       </Row>
   );

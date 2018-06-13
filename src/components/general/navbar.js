@@ -19,14 +19,18 @@ const Navbar = () => {
               <NavButtonWrapper>
                 <Link to="/">
                     <NavButton>
-
                         <NavLabel>Farm Summary</NavLabel>
+                    </NavButton>
+                </Link>
+
+                <Link to="/farmInfo">
+                    <NavButton>
+                        <NavLabel>Farm Information</NavLabel>
                     </NavButton>
                 </Link>
 
                 <Link to="/fieldDetails">
                     <NavButton>
-
                         <NavLabel>Field & Crop Details</NavLabel>
                     </NavButton>
                 </Link>
@@ -34,14 +38,12 @@ const Navbar = () => {
 
                 <Link to="/about">
                     <NavButton>
-
                         <NavLabel>About</NavLabel>
                     </NavButton>
                 </Link>
 
                 <Link to="help">
                     <NavButton>
-
                         <NavLabel>Help</NavLabel>
                     </NavButton>
                 </Link>

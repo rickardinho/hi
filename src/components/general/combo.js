@@ -11,7 +11,7 @@ import Dropdown, {
 } from '@trendmicro/react-dropdown';
 import 'react-dropdown/style.css';
 import 'react-select/dist/react-select.css';
-import { CustomDropdownMenu, CustomDropdownToggle, CustomMenuItem } from './../../styles/styles';
+import { CustomDropdown, CustomDropdownMenu, CustomDropdownToggle, CustomMenuItem } from './../../styles/styles';
 
 
 export default class Combo extends Component {
@@ -40,14 +40,14 @@ export default class Combo extends Component {
 
     return (
 
-      <Dropdown>
+      <CustomDropdown>
         <CustomDropdownToggle btnSize="sm" btnStyle="flat">
             -
         </CustomDropdownToggle>
         <CustomDropdownMenu>
             {menuItems}
         </CustomDropdownMenu>
-      </Dropdown>
+      </CustomDropdown>
 
 
 
