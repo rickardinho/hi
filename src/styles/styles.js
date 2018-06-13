@@ -28,8 +28,21 @@ export const Row = styled.div`
 
 `;
 
-export const Input = styled.input`
+export const RowWrapped = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: blue;
+  border-style: solid;
 
+
+`;
+
+export const Input = styled.input`
+  text-align: center;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -38,6 +51,7 @@ export const Input = styled.input`
   border-width: 1px;
   border-color: red;
   border-style: solid;
+  min-width: 20px;
 `;
 
 export const DivRainfall = styled.div`
@@ -62,7 +76,7 @@ export const Div1 = styled.div`
   border-width: 1px;
   border-color: verydarkgreen;
   border-style: solid;
-  min-width: 70px;
+  min-width: ${props => props.minWidth}px;
 
 `;
 
@@ -104,7 +118,7 @@ export const Div4 = styled.div`
   border-width: 1px;
   border-color: lightgreen;
   border-style: solid;
-  
+
 
 
 `;
@@ -304,9 +318,9 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   font-family: ${fonts.default};
   text-align: center;
-  margin: 15px;
+  margin: 5px;
   color: ${colours.blue};
-  font-size: 12px;
+  font-size: 10px;
   line-height: 22px;
   font-weight: 500;
 
@@ -318,26 +332,37 @@ export const P = styled.p`
   text-align: justify;
   margin: 10px;
   color: ${colours.blue};
-  font-size: 15px;
+  font-size: 10px;
   line-height: 22px;
   font-weight: 300;
 
 
 `;
 
-export const CenteredP = styled.p`
-  margin: auto;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 20px;
-  padding-top: 10px;
-
-  @media (max-width: 800px) {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+export const Pcentered = styled.p`
+  font-family: ${fonts.default};
+  text-align: center;
+  margin: 10px;
+  color: ${colours.blue};
+  font-size: 10px;
+  line-height: 22px;
+  font-weight: 300;
 
 `;
+
+// export const CenteredP = styled.p`
+//   margin: auto;
+//   padding-left: 100px;
+//   padding-right: 100px;
+//   padding-bottom: 20px;
+//   padding-top: 10px;
+//
+//   @media (max-width: 800px) {
+//     padding-left: 5px;
+//     padding-right: 5px;
+//   }
+//
+// `;
 
 export const FooterText = styled.p`
   font-family: ${fonts.default};

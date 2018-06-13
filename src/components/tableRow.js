@@ -11,8 +11,8 @@ const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comme
 
     let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
-           <Div1>
-             <Input value={rainGauge} />
+          <Div1>
+            <Input value={rainGauge} />
           </Div1>
 
 
@@ -26,7 +26,7 @@ const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comme
 
 
 
-          <Div1>
+          <Div1 min-width={70}>
             <H4>{date}</H4>
           </Div1>
 
