@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
+    "@trendmicro/react-dropdown": "^1.2.3",
+    "react": "^16.4.0",
     "react-burger-menu": "^2.2.3",
     "react-dom": "^16.2.0",
     "react-dropdown": "^1.4.0",
