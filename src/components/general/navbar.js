@@ -24,10 +24,10 @@ const Navbar = () => {
                     </NavButton>
                 </Link>
 
-                <Link to="/detail">
+                <Link to="/fieldDetails">
                     <NavButton>
 
-                        <NavLabel>Farm Details</NavLabel>
+                        <NavLabel>Field & Crop Details</NavLabel>
                     </NavButton>
                 </Link>
 

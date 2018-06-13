@@ -16,7 +16,7 @@ class BurgerMenu extends Component {
             </NavButton>
         </Link>
 
-        <Link to="detail">
+        <Link to="fieldDetails">
             <NavButton>
 
                 <NavLabel>Farm Details</NavLabel>

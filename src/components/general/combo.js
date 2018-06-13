@@ -23,7 +23,7 @@ export default class Combo extends Component {
     const defaultOption = options[this.props.value - 1];
 
     return (
-      <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+      <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="-" />
 
     );
   }

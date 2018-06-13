@@ -21,11 +21,110 @@ export const Row = styled.div`
   flex-wrap: nowrap;
   justify-content: space-around;
   background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: pink;
+  border-style: solid;
+
+
+`;
+
+export const RowWrapped = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: blue;
+  border-style: solid;
+
+
+`;
+
+export const Input = styled.input`
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  min-width: 20px;
+`;
+
+export const DivRainfall = styled.div`
+  display: flex;
+  flex: 0.5;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: orange;
+  border-style: solid;
+  min-width: 70px;
+
+`;
+
+export const Div1 = styled.div`
+  display: flex;
+  flex: 0.5;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: verydarkgreen;
+  border-style: solid;
+  min-width: ${props => props.minWidth}px;
+
+`;
+
+export const Div2 = styled.div`
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: darkgreen;
+  border-style: solid;
+
+
+`;
+
+export const Div3 = styled.div`
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: green;
+  border-style: solid;
+
+
+`;
+
+export const Div4 = styled.div`
+  display: flex;
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: ${colours.offWhite};
+  border-width: 1px;
+  border-color: lightgreen;
+  border-style: solid;
+
+
 
 `;
 
 export const BarBackground = styled.div`
-  height: 30px;
+  height: 20px;
   width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -219,9 +318,9 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   font-family: ${fonts.default};
   text-align: center;
-  margin: 15px;
+  margin: 5px;
   color: ${colours.blue};
-  font-size: 15px;
+  font-size: 10px;
   line-height: 22px;
   font-weight: 500;
 
@@ -233,26 +332,37 @@ export const P = styled.p`
   text-align: justify;
   margin: 10px;
   color: ${colours.blue};
-  font-size: 15px;
+  font-size: 10px;
   line-height: 22px;
   font-weight: 300;
 
 
 `;
 
-export const CenteredP = styled.p`
-  margin: auto;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 20px;
-  padding-top: 10px;
-
-  @media (max-width: 800px) {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+export const Pcentered = styled.p`
+  font-family: ${fonts.default};
+  text-align: center;
+  margin: 10px;
+  color: ${colours.blue};
+  font-size: 10px;
+  line-height: 22px;
+  font-weight: 300;
 
 `;
+
+// export const CenteredP = styled.p`
+//   margin: auto;
+//   padding-left: 100px;
+//   padding-right: 100px;
+//   padding-bottom: 20px;
+//   padding-top: 10px;
+//
+//   @media (max-width: 800px) {
+//     padding-left: 5px;
+//     padding-right: 5px;
+//   }
+//
+// `;
 
 export const FooterText = styled.p`
   font-family: ${fonts.default};

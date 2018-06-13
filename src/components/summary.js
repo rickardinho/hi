@@ -2,42 +2,62 @@ import React from 'react';
 import { render } from 'react-dom';
 import Combo from './general/combo';
 import TableRow from './tableRow';
-import HeaderRow from './headerRow';
-import { MainWrapper } from './../styles/styles';
+// import HeaderRow from './headerRow
+import HeaderRow2 from './headerRow2';
+import { MainWrapper, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+
+const rainGaugeNames = [ 'Raingauge East', 'Raingauge North', 'Raingauge West', 'Raingauge South' ]
 
 const data = [
   {
     date: '1 Jan',
-    rainfall: 5,
-    sunshine: 4
+    wind: 5,
+    sunshine: 4,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
   },{
     date: '2 Jan',
-    rainfall: 2,
-    sunshine: 8
+    wind: 2,
+    sunshine: 8,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
   },{
     date: '3 Jan',
-    rainfall: 7,
-    sunshine: 2
-  },
-  ,{
+    wind: 7,
+    sunshine: 2,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
+  },{
     date: '4 Jan',
-    rainfall: 3,
-    sunshine: 4
-  },
-  ,{
+    wind: 3,
+    sunshine: 4,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
+  },{
     date: '5 Jan',
-    rainfall: 2,
-    sunshine: 7
-  },
-  ,{
+    wind: 2,
+    sunshine: 7,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
+  },{
     date: '6 Jan',
-    rainfall: 1,
-    sunshine: 6
-  },
-  ,{
+    wind: 1,
+    sunshine: 6,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
+  },{
     date: '7 Jan',
-    rainfall: 6,
-    sunshine: 4
+    wind: 6,
+    sunshine: 4,
+    pwl: 3.2,
+    rainGaugeData: [ 1, 2, 3, 4],
+    comments: 'blah blah blah'
   }
 ]
 
@@ -49,20 +69,27 @@ const Summary  = () => {
               key={ i }
               index={ i }
               date={ data.date }
-              rainfall={ data.rainfall }
               sunshine={ data.sunshine }
+              wind={ data.wind }
+              pwl={ data.pwl }
+              rainGaugeData={ data.rainGaugeData }
+              comments={ data.comments }
           />
       );
   });
 
   return (
       <MainWrapper>
-          <HeaderRow/>
+        <Div1>
+          <H2>Farm Summary</H2>
+        </Div1>
+
+        <HeaderRow2 rainGaugeNames={ rainGaugeNames }/>
 
 
-          {
-              mappedTable
-          }
+        {
+            mappedTable
+        }
 
 
       </MainWrapper>
