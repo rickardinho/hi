@@ -400,11 +400,10 @@ export const Title = styled.h1`
 
 export const H2 = styled.h2`
   font-family: ${fonts.default};
-  text-align: center;
+  text-align: left;
   color: ${colours.blue};
-  font-size: 24px;
+  font-size: 20px;
   line-height: 31px;
-  letter-spacing: .04px;
   font-weight: 300;
 
 `;
