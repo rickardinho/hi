@@ -95,7 +95,7 @@ export const Row = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 0px;
   border-color: pink;
   border-style: solid;
@@ -285,6 +285,7 @@ export const LogoWrapper = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  margin-left: 5px;
 
 `;
 
@@ -376,10 +377,24 @@ export const SocialButton = styled.a`
 
 export const NavButtonWrapper = styled.div`
 
+  display: flex;
+  flex-direction: row;
+  background: 'blue';
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    flex: 1;
+  }
+
+`;
+
+export const NavHelpWrapper = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  background: 'blue';
+  position: absolute;
+  right: 0;
 
   @media (max-width: 600px) {
     display: none;
@@ -473,7 +488,7 @@ export const FooterText = styled.p`
   font-family: ${fonts.default};
   text-align: center;
   color: ${colours.blue};
-  font-size: 15px;
+  font-size: 12px;
   line-height: 22px;
   font-weight: 300;
   text-decoration: none;
@@ -484,7 +499,7 @@ export const FooterText = styled.p`
 export const FooterLink = styled.a`
   font-family: ${fonts.default};
   color: ${colours.blue};
-  font-size: 15px;
+  font-size: 12px;
   line-height: 22px;
   font-weight: 400;
   border: none;
@@ -504,12 +519,25 @@ export const NavButton = styled.button`
   text-align: center;
   color: ${colours.blue};
   background: ${colours.offWhite};
-  border: none;
   text-decoration: none;
   padding: 14px 16px;
+  border: none;
+
 `;
 
 export const NavLabel = styled.label`
+
+`;
+
+export const HeaderbarWrapper = styled.section`
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: ${colours.verylightgray};
+  button:focus {outline:0;};
 
 `;
 
@@ -517,29 +545,30 @@ export const NavbarWrapper = styled.section`
 
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2em;
   background: ${colours.offWhite};
   button:focus {outline:0;};
 
 `;
 
 export const FooterWrapper = styled.section`
-  padding: 1.2em;
-  background: ${colours.offWhite};
+  background: ${colours.lightgray};
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
 `;
 
 export const BurgerStyles = {
   bmBurgerButton: {
     position: 'relative',
-    width: '36px',
-    height: '30px'
+    width: '20px',
+    height: '18px',
+    marginLeft: '5px',
+    marginRight: '5px'
   },
   bmBurgerBars: {
-    background: colours.blue
+    background: colours.blue,
+    height: '2px'
   },
   bmCrossButton: {
     height: '24px',
