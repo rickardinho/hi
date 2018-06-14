@@ -8,6 +8,7 @@ import About from './components/about.js';
 import FarmInfo from './components/farmInfo.js';
 import FieldDetails from './components/fieldDetails.js';
 import Help from './components/help.js';
+import Headerbar from './components/general/headerbar.js';
 import Navbar from './components/general/navbar.js';
 import Footer from './components/general/footer.js';
 import { store } from './init-store.js';
@@ -20,6 +21,7 @@ const Routes = () => {
 
     <Router>
       <div>
+        <Headerbar />
         <Navbar />
 
         <Route exact path="/" component={ Home } />
