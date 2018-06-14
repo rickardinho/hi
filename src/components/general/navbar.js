@@ -13,8 +13,11 @@ const Navbar = () => {
 
               <LogoWrapper>
                 <Block>
-                  <H2>Happy Irrigator</H2>
-                  <H4>v2.0</H4>
+                  <Row>
+                    <H2>Happy Irrigator</H2>
+                  </Row>
+                    <H4>v2.0</H4>
+                  
                 </Block>
               </LogoWrapper>
 
