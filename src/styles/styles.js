@@ -392,8 +392,8 @@ export const BurgerWrapper = styled.div`
 
 export const Title = styled.h1`
   font-family: ${fonts.default};
-  font-size: 1.5em;
-  text-align: center;
+  font-size: 26px;
+  text-align: left;
   color: ${colours.blue};
 
 `;
