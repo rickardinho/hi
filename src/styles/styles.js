@@ -519,11 +519,13 @@ export const NavButton = styled.button`
   text-align: center;
   color: ${colours.blue};
   background: ${colours.offWhite};
+  border: none;
   text-decoration: none;
   padding: 14px 16px;
-  border: none;
+  button:focus {outline:0;};
 
 `;
+
 
 export const NavLabel = styled.label`
 
@@ -556,6 +558,14 @@ export const FooterWrapper = styled.section`
   bottom: 0;
   width: 100%;
 
+`;
+
+export const BurgerDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: ${colours.offWhite};
+  height: 100%;
 `;
 
 export const BurgerStyles = {
