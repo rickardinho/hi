@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
 import '@trendmicro/react-dropdown/dist/react-dropdown.css';
-import Dropdown, {
-    DropdownToggle,
-    DropdownMenu,
-    DropdownMenuWrapper,
-    MenuItem,
-    DropdownButton
-} from '@trendmicro/react-dropdown';
+import Dropdown, { MenuItem } from '@trendmicro/react-dropdown';
 import colours from './colours';
 
 const fonts = {
-  default: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
-  default2: "Arial, Helvetica, sans-serif",
+  default: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif',
+  default2: 'Arial, Helvetica, sans-serif',
   thin: 500
 };
 
@@ -286,6 +280,11 @@ export const LogoWrapper = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   margin-left: 5px;
+  margin-right: 5px;
+  border-width: 1px;
+  border-color: lightgreen;
+  border-style: solid;
+
 
 `;
 
