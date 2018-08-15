@@ -368,7 +368,13 @@ export const BulletDiv = styled.div`
 
 `;
 
-export const SocialButton = styled.a`
+export const SocialButton = styled.button`
+
+  padding: 10px;
+
+`;
+
+export const ShowChartButton = styled.a`
 
   padding: 10px;
 
