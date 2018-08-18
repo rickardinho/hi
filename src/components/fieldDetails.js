@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Modal from 'react-modal';
 import Combo from './general/combo';
+import LineChart from './lineChart';
 import FieldTableRow from './fieldTableRow';
 import HeaderRow from './detailsHeaderRow';
 import { MainWrapper } from './../styles/styles';
@@ -181,6 +182,9 @@ class FieldDetails extends Component {
           <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
           <button onClick={this.closeModal}>close</button>
           <div>I am a modal</div>
+      
+          <LineChart />
+      
           <form>
             <input />
             <button>tab navigation</button>
