@@ -19,3 +19,5 @@ const LineChart = () => (
     <Series type={Line} />
   </Chart>
 );
+
+export default LineChart;
