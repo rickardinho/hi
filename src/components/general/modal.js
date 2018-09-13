@@ -1,4 +1,5 @@
-
+class Modal extends React.Component {
+  
 return (
   <div>
     <div className="modal-overlay-div" style={overlayStyle} />
@@ -9,6 +10,9 @@ return (
     </div>
   </div>
 );
+
+}
+
 
 import Modal from 'react-modal';
  
