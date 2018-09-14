@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
 import Combo from './general/combo';
-import Modal from './general/';
+import Modal from './general/modal';
 import FieldTableRow from './fieldTableRow';
 import HeaderRow from './detailsHeaderRow';
 import { MainWrapper } from './../styles/styles';
