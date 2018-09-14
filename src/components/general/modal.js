@@ -3,6 +3,33 @@ import './Modal.css';
 
 export default class Modal extends Component {
   
+  listenKeyboard(event) {
+  if (event.key === 'Escape' || event.keyCode === 27) {
+    this.props.onClose();
+  }
+}
+
+componentDidMount() {
+  if (this.props.onClose) {
+    window.addEventListener('keydown', this.listenKeyboard.bind(this), true);
+  }
+}
+
+componentWillUnmount() {
+  if (this.props.onClose) {
+    window.removeEventListener('keydown', this.listenKeyboard.bind(this), true);
+  }
+}
+
+onOverlayClick() {
+  this.props.onClose();
+}
+
+onDialogClick(event) {
+  event.stopPropagation();
+}
+  
+  
  render () { 
   
 return (
