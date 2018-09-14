@@ -1,3 +1,9 @@
+
+
+
+
+import 'Modal.css';
+
 class Modal extends React.Component {
   
 return (
@@ -24,6 +30,7 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)'
+    
   }
 };
  
