@@ -8,12 +8,14 @@ import Home from './components/home.js';
 import About from './components/about.js';
 import FarmInfo from './components/farmInfo.js';
 import FieldDetails from './components/fieldDetails.js';
+import FieldDetailsContainer from './containers/fieldDetails-container';
 import Help from './components/help.js';
 import Headerbar from './components/general/headerbar.js';
 import Navbar from './components/general/navbar.js';
 import Footer from './components/general/footer.js';
 import { store } from './init-store.js';
 import SlidingBurgerContent from './components/general/sliding-burger.js';
+import ModalRoot from './containers/modalRoot';
 
 class Routes extends Component {
 
@@ -60,11 +62,13 @@ class Routes extends Component {
 
             <Route exact path="/" component={ Home } />
             <Route path='/farmInfo' component={ FarmInfo } />
-            <Route path='/fieldDetails' component={ FieldDetails } />
+            <Route path='/fieldDetails' component={ FieldDetailsContainer } />
             <Route path='/about' component={ About } />
             <Route path='/help' component={ Help } />
 
             </Switch>
+
+            <ModalRoot />
 
 
             <Footer />

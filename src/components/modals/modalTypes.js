@@ -1,0 +1,2 @@
+export const MODAL_TYPE_CHART = 'CHART_MODAL';
+export const MODAL_TYPE_OTHER = 'OTHER_MODAL';

@@ -2,26 +2,25 @@
 import { SHOW_MODAL, HIDE_MODAL } from '../actions/modal';
 
 /** Initial State */
-const initialModalState = {
-  modalType: null
+const initialState = {
+  type: null,
+  props: {}
 };
 
 /** Modal reducer */
-export default function (state = initialModalState, action) {
-  const newState = Object.assign({}, state);
-
+function modalReducer (state = initialState, action) {
   switch (action.type) {
-
     case SHOW_MODAL:
-      newState.modalType = action.modalType;
-      break;
-
+      return {
+        ...state,
+        type: action.payload.type,
+        props: action.payload.props
+      };
     case HIDE_MODAL:
-      return initialModalState;
-
+      return initialState;
     default:
       return state;
   }
-
-  return newState;
 }
+
+export default modalReducer;

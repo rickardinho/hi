@@ -3,15 +3,14 @@ export const SHOW_MODAL = 'SHOW_MODAL';
 export const HIDE_MODAL = 'HIDE_MODAL';
 
 /** Action-creators */
-export const loadModal = (modalType) => {
-  return {
+export const showModal = (type, props) => ({
     type: SHOW_MODAL,
-    modalType
-  };
-};
+    payload: {
+      type,
+      props
+    }
+});
 
-export const hideModal = () => {
-  return {
+export const hideModal = () => ({
     type: HIDE_MODAL
-  };
-};
+});
