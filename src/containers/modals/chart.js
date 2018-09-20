@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import LineChart from './lineChart;
 
 import { hideModal } from '../../actions/modal';
 import Modal from '../../components/modals/modal';
@@ -19,6 +20,7 @@ const Chart = ({ title, afterClose, hideModal }) => {
       <button onClick={onClose}>
         X
       </button>
+      <LineChart />
     </Modal>
   );
 };
