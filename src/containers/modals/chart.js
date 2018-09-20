@@ -22,7 +22,9 @@ const Chart = ({ title, afterClose, hideModal }) => {
       <button onClick={onClose}>
         X
       </button>
+      <div>
       <LineChart />
+    </div>
       </ChartWrapper>
     </Modal>
   );
