@@ -1,6 +1,6 @@
 import { Chart, Axis, Series, Tooltip, Cursor, Line } from "react-charts";
 
-export default const LineChart = (
+const LineChart = (
   <Chart
     data={[
       {
@@ -18,3 +18,5 @@ export default const LineChart = (
     <Series type={Line} />
   </Chart>
 );
+
+export default LineChart;
