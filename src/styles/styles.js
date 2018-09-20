@@ -45,6 +45,14 @@ CustomDropdownToggle.defaultProps = Dropdown.Toggle.defaultProps;
 
 // Main
 
+
+export const ChartWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+`;
+
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
