@@ -1,3 +1,4 @@
+import React from 'react';
 import { Chart, Axis, Series, Tooltip, Cursor, Line } from "react-charts";
 
 const LineChart = () => (
