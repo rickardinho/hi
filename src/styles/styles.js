@@ -567,8 +567,8 @@ export const NavbarWrapper = styled.section`
 
 export const FooterWrapper = styled.section`
   background: ${colours.lightgray};
-  position: fixed;
-  bottom: 0;
+  
+  
   width: 100%;
 
 `;
