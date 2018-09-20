@@ -23,8 +23,8 @@ const Chart = ({ title, afterClose, hideModal }) => {
         X
       </button>
       <div>
-      <LineChart />
-    </div>
+      <p>some element</p>
+      </div>
       </ChartWrapper>
     </Modal>
   );
