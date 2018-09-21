@@ -395,7 +395,8 @@ export const CloseButton = styled.button`
   top: 5;
   right: 5;
   width: 40;
-  background: 'red';
+  background: ${colours.offWhite};
+  color: ${colours.blue};
 
 `;
 
