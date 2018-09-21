@@ -392,9 +392,9 @@ export const CloseButton = styled.button`
 
   padding: 0px;
   position: 'absolute';
-  top: 5;
-  right: 5;
-  width: 40;
+  top: 5px;
+  right: 5px;
+  width: 40px;
   background: ${colours.offWhite};
   color: ${colours.blue};
 
