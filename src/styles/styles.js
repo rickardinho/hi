@@ -388,6 +388,15 @@ export const ShowChartButton = styled.a`
 
 `;
 
+export const CloseButton = styled.button`
+
+  padding: 10px;
+  position: 'absolute';
+  top: 5;
+  right: 5;
+
+`;
+
 export const NavButtonWrapper = styled.div`
 
   display: flex;
