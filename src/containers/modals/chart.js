@@ -19,9 +19,9 @@ const Chart = ({ title, afterClose, hideModal }) => {
   return (
     <Modal title={title} onClose={onClose}>
       <ChartWrapper>
-      <button onClick={onClose}>
+      <CloseButton onClick={onClose}>
         X
-      </button>
+      </CloseButton>
       <div>
       <p>some element</p>
       </div>
