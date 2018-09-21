@@ -394,6 +394,7 @@ export const CloseButton = styled.button`
   position: 'absolute';
   top: 5;
   right: 5;
+  width: 40;
 
 `;
 
