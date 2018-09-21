@@ -390,11 +390,12 @@ export const ShowChartButton = styled.a`
 
 export const CloseButton = styled.button`
 
-  padding: 10px;
+  padding: 0px;
   position: 'absolute';
   top: 5;
   right: 5;
   width: 40;
+  background: 'red';
 
 `;
 
