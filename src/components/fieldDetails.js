@@ -4,8 +4,7 @@ import { render } from 'react-dom';
 import Combo from './general/combo';
 import FieldTableRow from './fieldTableRow';
 import HeaderRow from './detailsHeaderRow';
-import { MainWrapper } from './../styles/styles';
-import { PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
+import { MainWrapper, PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
 
 const customStyles = {
   content : {

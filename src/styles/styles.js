@@ -391,12 +391,22 @@ export const ShowChartButton = styled.a`
 export const CloseButton = styled.button`
 
   padding: 0px;
-  position: 'absolute';
+  position: absolute;
   top: 5px;
   right: 5px;
-  width: 40px;
-  background: ${colours.offWhite};
-  color: ${colours.blue};
+  width: 20px;
+  height: 20px;
+  background: ${colours.red};
+  color: ${colours.offWhite};
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: ${colours.offWhite};
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+  button:focus {outline:0;};
+  text-decoration: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 
 `;
 
@@ -579,8 +589,8 @@ export const NavbarWrapper = styled.section`
 
 export const FooterWrapper = styled.section`
   background: ${colours.lightgray};
-  
-  
+
+
   width: 100%;
 
 `;
