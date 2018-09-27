@@ -40,7 +40,7 @@ const LineChart = () => (
   <div>
     <XYPlot
 
-      width={100%}
+      width={'100%'}
       height={300}>
       <HorizontalGridLines />
       <VerticalGridLines />
