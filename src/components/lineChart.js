@@ -38,6 +38,7 @@ const data2 = [
 
 const LineChart = () => (
   <div>
+      <CenteredDiv>
     <FlexibleXYPlot
 
     >
@@ -51,6 +52,7 @@ const LineChart = () => (
       <XAxis />
       <YAxis />
     </FlexibleXYPlot>
+      </CenteredDiv>
     <CenteredDiv>
       <DiscreteColorLegend orientation="horizontal" width={300} items={legendItems} />
     </CenteredDiv>
