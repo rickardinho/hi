@@ -3,7 +3,7 @@ import { Chart, Axis, Cursor, Tooltip, Series, Line } from 'react-charts';
 import '../../node_modules/react-vis/dist/style.css';
 import colours from '../styles/colours';
 import { CenteredDiv } from '../styles/styles';
-import { XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, VerticalBarSeries, LineSeries, DiscreteColorLegend } from 'react-vis';
+import { FlexibleXYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, VerticalBarSeries, LineSeries, DiscreteColorLegend } from 'react-vis';
 
 const data = [
       { x: 0, y: 8 },
@@ -38,10 +38,9 @@ const data2 = [
 
 const LineChart = () => (
   <div>
-    <XYPlot
+    <FlexibleXYPlot
 
-      width={'100%'}
-      height={300}>
+    >
       <HorizontalGridLines />
       <VerticalGridLines />
       <VerticalBarSeries data={data2} color={colours.blue} />
@@ -51,7 +50,7 @@ const LineChart = () => (
 
       <XAxis />
       <YAxis />
-    </XYPlot>
+    </FlexibleXYPlot>
     <CenteredDiv>
       <DiscreteColorLegend orientation="horizontal" width={300} items={legendItems} />
     </CenteredDiv>
