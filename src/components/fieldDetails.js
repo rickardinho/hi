@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
 import Combo from './general/combo';
 import FieldTableRow from './fieldTableRow';
 import HeaderRow from './detailsHeaderRow';
-import { MainWrapper } from './../styles/styles';
-import { PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
-
+import { MainRowWrapper, MainWrapper, PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
 
 const customStyles = {
   content : {
@@ -20,7 +18,7 @@ const customStyles = {
 };
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root');
+// Modal.setAppElement('#root');
 
 const data = [
   {
@@ -105,30 +103,17 @@ const InfoRow  = ({ rainGaugeName, area, fieldName, crop, soil }) => {
 
 class FieldDetails extends Component {
 
-  constructor() {
-    super();
-
-    this.state = {
-      modalIsOpen: false
-    };
-
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+  constructor (props) {
+    super(props);
+    console.log('constructor this props', this.props);
+    this.showChartModal = this.showChartModal.bind(this);
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
+  showChartModal () {
+    const { showChartModal } = this.props;
+    showChartModal();
   }
 
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
 
   render () {
 
@@ -151,9 +136,14 @@ class FieldDetails extends Component {
     return (
 
       <MainWrapper>
-        <PageTitleDiv>
-          <H3>Field & Crop Details</H3>
-        </PageTitleDiv>
+        <MainRowWrapper>
+          <PageTitleDiv>
+            <H3>Field & Crop Details</H3>
+            <ShowChartButton type="button" onClick={this.showChartModal}>
+              Show Chart
+            </ShowChartButton>
+          </PageTitleDiv>
+        </MainRowWrapper>
         <MainWrapper>
 
           <InfoRow rainGaugeName='South' area='9.3 ha' fieldName='Dusty Field' crop='Potatoes, Desiree' soil='fine sandy loam' />
@@ -166,29 +156,6 @@ class FieldDetails extends Component {
 
         </MainWrapper>
 
-        <ShowChartButton type="button" onClick={this.openModal}>
-          Show Chart
-        </ShowChartButton>
-
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
 
       </MainWrapper>
     );

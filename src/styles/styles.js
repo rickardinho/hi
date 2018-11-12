@@ -45,16 +45,39 @@ CustomDropdownToggle.defaultProps = Dropdown.Toggle.defaultProps;
 
 // Main
 
+
+export const ChartWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  border-width: 3px;
+  border-color: blue;
+  border-style: solid;
+  height: 100%;
+
+`;
+
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  flex: 1;
 
 `;
 
+export const MainRowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1;
+  justify-content: space-between;
+
+`;
 export const PageTitleDiv = styled.div`
   display: flex;
-  justify-content: flex-start;
+  flex: 1;
+  flex-direction: row;
   align-items: center;
   padding-left: 10px;
   padding-top: 5px;
@@ -63,6 +86,7 @@ export const PageTitleDiv = styled.div`
   border-width: 0px;
   border-color: ${colours.lightgray};
   border-style: solid;
+  justify-content: space-between;
 
 `;
 
@@ -101,7 +125,7 @@ export const RowWrapped = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   background: ${colours.verylightgray};
   border-width: 0px;
   border-color: blue;
@@ -374,9 +398,34 @@ export const SocialButton = styled.button`
 
 `;
 
-export const ShowChartButton = styled.a`
+export const ShowChartButton = styled.button`
+  margin: 2px;
+  padding: 5px;
+  background: ${colours.blue};
+  color: ${colours.offWhite};
+  right: 0;
+  position: absolute;
+`;
 
-  padding: 10px;
+export const CloseButton = styled.button`
+
+  padding: 0px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: ${colours.red};
+  color: ${colours.offWhite};
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: ${colours.offWhite};
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+  button:focus {outline:0;};
+  text-decoration: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 
 `;
 
@@ -559,8 +608,8 @@ export const NavbarWrapper = styled.section`
 
 export const FooterWrapper = styled.section`
   background: ${colours.lightgray};
-  position: fixed;
-  bottom: 0;
+
+
   width: 100%;
 
 `;
