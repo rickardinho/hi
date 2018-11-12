@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { H3 } from '../../styles/styles';
 // import './Modal.css';
 // import { hideModal } from '../../actions/modal';
 
@@ -27,6 +28,13 @@ const Content = styled.div`
   overflow-scrolling: touch;
   padding: 4px;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border-color: orange;
+  border-width: 2;
+  border-style: solid;
 
   &:after {
     vertical-align: middle;
@@ -34,27 +42,47 @@ const Content = styled.div`
     height: 100%;
     margin-left: -.05em;
     content: '';
+    border-color: purple;
+    border-width: 2;
+    border-style: solid;
   }
 `;
 
+
 const Dialog = styled.div`
   position: relative;
+  height: 90%;
   outline: 0;
-  width: 100%;
-  background: white;
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
-  max-width: 520px;
+  display: flex;
   cursor: default;
+  background: white;
+  flex-direction: column;
+  margin: 5%;
+  border-color: pink;
+  border-width: 2;
+  border-style: solid;
 `;
 
 const Header = styled.div`
-  padding: 16px 8px 8px 8px
+  padding: 8px 8px 8px 8px;
+  border-color: brown;
+  border-width: 2;
+  border-style: solid;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Body = styled.div`
-  padding-bottom: 16px
+  display: flex;
+  right: 0;
+  left: 0;
+  flex: 8;
+  border-color: green;
+  border-width: 2;
+  border-style: solid;
+
 `;
 
 export default class Modal extends Component {
@@ -90,7 +118,7 @@ export default class Modal extends Component {
 
     return title ? (
       <div className='modal__title'>
-        <h1>{title}</h1>
+        <H3>{title}</H3>
       </div>
     ) : null;
   }

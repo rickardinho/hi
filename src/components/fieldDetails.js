@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import Combo from './general/combo';
 import FieldTableRow from './fieldTableRow';
 import HeaderRow from './detailsHeaderRow';
-import { MainWrapper, PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
+import { MainRowWrapper, MainWrapper, PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
 
 const customStyles = {
   content : {
@@ -136,9 +136,14 @@ class FieldDetails extends Component {
     return (
 
       <MainWrapper>
-        <PageTitleDiv>
-          <H3>Field & Crop Details</H3>
-        </PageTitleDiv>
+        <MainRowWrapper>
+          <PageTitleDiv>
+            <H3>Field & Crop Details</H3>
+            <ShowChartButton type="button" onClick={this.showChartModal}>
+              Show Chart
+            </ShowChartButton>
+          </PageTitleDiv>
+        </MainRowWrapper>
         <MainWrapper>
 
           <InfoRow rainGaugeName='South' area='9.3 ha' fieldName='Dusty Field' crop='Potatoes, Desiree' soil='fine sandy loam' />
@@ -151,9 +156,6 @@ class FieldDetails extends Component {
 
         </MainWrapper>
 
-        <ShowChartButton type="button" onClick={this.showChartModal}>
-          Show Chart
-        </ShowChartButton>
 
       </MainWrapper>
     );

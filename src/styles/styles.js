@@ -49,7 +49,12 @@ CustomDropdownToggle.defaultProps = Dropdown.Toggle.defaultProps;
 export const ChartWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+
+  flex: 1;
+  border-width: 3px;
+  border-color: blue;
+  border-style: solid;
+  height: 100%;
 
 `;
 
@@ -57,12 +62,22 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  flex: 1;
 
 `;
 
+export const MainRowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1;
+  justify-content: space-between;
+
+`;
 export const PageTitleDiv = styled.div`
   display: flex;
-  justify-content: flex-start;
+  flex: 1;
+  flex-direction: row;
   align-items: center;
   padding-left: 10px;
   padding-top: 5px;
@@ -71,6 +86,7 @@ export const PageTitleDiv = styled.div`
   border-width: 0px;
   border-color: ${colours.lightgray};
   border-style: solid;
+  justify-content: space-between;
 
 `;
 
@@ -109,7 +125,7 @@ export const RowWrapped = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   background: ${colours.verylightgray};
   border-width: 0px;
   border-color: blue;
@@ -382,10 +398,13 @@ export const SocialButton = styled.button`
 
 `;
 
-export const ShowChartButton = styled.a`
-
-  padding: 10px;
-
+export const ShowChartButton = styled.button`
+  margin: 2px;
+  padding: 5px;
+  background: ${colours.blue};
+  color: ${colours.offWhite};
+  right: 0;
+  position: absolute;
 `;
 
 export const CloseButton = styled.button`
