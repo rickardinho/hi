@@ -97,7 +97,7 @@ export const Block = styled.div`
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 2px;
   border-color: ${colours.lightgray};
   border-style: solid;
@@ -113,7 +113,7 @@ export const Row = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background: ${colours.verylightgray};
+  background: ${colours.offWhite};
   border-width: 0px;
   border-color: pink;
   border-style: solid;
@@ -126,7 +126,7 @@ export const RowWrapped = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: ${colours.verylightgray};
+  background: ${colours.offWhite};
   border-width: 0px;
   border-color: blue;
   border-style: solid;
@@ -139,9 +139,9 @@ export const CellSm = styled.div`
   width: 10%;
   justify-content: center;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
-  border-color: ${colours.verylightgray};
+  border-color: ${colours.offWhite};
   border-style: solid;
   min-width: 40px;
   max-width: 80px;
@@ -154,9 +154,9 @@ export const CellLg = styled.div`
   width: 30%;
   justify-content: center;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
-  border-color: ${colours.verylightgray};
+  border-color: ${colours.offWhite};
   border-style: solid;
 
 
@@ -181,7 +181,7 @@ export const DivRainfall = styled.div`
   flex: 0.5;
   justify-content: center;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
   border-color: orange;
   border-style: solid;
@@ -194,7 +194,7 @@ export const Div1 = styled.div`
   flex: 0.5;
   justify-content: center;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
   border-color: verydarkgreen;
   border-style: solid;
@@ -209,7 +209,7 @@ export const Div2 = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
   border-color: darkgreen;
   border-style: solid;
@@ -222,7 +222,7 @@ export const Div3 = styled.div`
   flex: 3;
   justify-content: center;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
   border-color: green;
   border-style: solid;
@@ -237,7 +237,7 @@ export const Div4 = styled.div`
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border-width: 1px;
   border-color: lightgreen;
   border-style: solid;
@@ -341,7 +341,7 @@ export const DownloadDiv = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
 
 `;
 
@@ -363,7 +363,7 @@ export const TeamDiv = styled.div`
 `;
 
 export const TeamMemberDiv = styled.div`
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
 
 
 `;
@@ -402,9 +402,14 @@ export const ShowChartButton = styled.button`
   margin: 2px;
   padding: 5px;
   background: ${colours.blue};
-  color: ${colours.offWhite};
+  color: ${colours.verylightgray};
   right: 0;
   position: absolute;
+
+  &:hover {
+    background: ${colours.verylightgray};
+    color: ${colours.blue};
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -416,16 +421,21 @@ export const CloseButton = styled.button`
   width: 20px;
   height: 20px;
   background: ${colours.red};
-  color: ${colours.offWhite};
+  color: ${colours.verylightgray};
   border-radius: 30px;
   border-width: 1px;
-  border-color: ${colours.offWhite};
+  border-color: ${colours.verylightgray};
   border-style: solid;
   align-items: center;
   justify-content: center;
   button:focus {outline:0;};
   text-decoration: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: ${colours.offWhite};
+    color: ${colours.red};
+  }
 
 `;
 
@@ -453,10 +463,12 @@ export const NavHelpWrapper = styled.div`
   @media (max-width: 600px) {
     display: none;
   }
+
 `;
 
 export const BurgerWrapper = styled.div`
   padding: 10px;
+
 `;
 
 export const Title = styled.h1`
@@ -559,6 +571,10 @@ export const FooterLink = styled.a`
   border: none;
   text-decoration: none;
 
+  &:hover {
+    color: ${colours.offWhite};
+  }
+
 
 `;
 
@@ -572,7 +588,7 @@ export const NavButton = styled.button`
   font-weight: ${fonts.thin};
   text-align: center;
   color: ${colours.blue};
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   border: none;
   text-decoration: none;
   padding: 14px 16px;
@@ -592,7 +608,7 @@ export const HeaderbarWrapper = styled.section`
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  background: ${colours.verylightgray};
+  background: ${colours.offWhite};
   button:focus {outline:0;};
 
 `;
@@ -601,7 +617,7 @@ export const NavbarWrapper = styled.section`
 
   display: flex;
   flex-direction: row;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   button:focus {outline:0;};
 
 `;
@@ -618,8 +634,9 @@ export const BurgerDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
-  background: ${colours.offWhite};
+  background: ${colours.verylightgray};
   height: 100%;
+
 `;
 
 export const BurgerStyles = {
@@ -629,6 +646,7 @@ export const BurgerStyles = {
     height: '18px',
     marginLeft: '5px',
     marginRight: '5px'
+
   },
   bmBurgerBars: {
     background: colours.blue,
@@ -642,7 +660,7 @@ export const BurgerStyles = {
     background: colours.gray
   },
   bmMenu: {
-    background: colours.offWhite,
+    background: colours.verylightgray,
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em'
   },
@@ -651,10 +669,38 @@ export const BurgerStyles = {
   },
   bmItemList: {
     color: colours.white,
-    background: colours.offWhite,
+    background: colours.verylightgray,
     padding: '0.8em'
   },
   bmOverlay: {
     background: colours.darkgray
   }
 };
+
+export const NavBarStyles = {
+  // activeTabButton: { // do not use as will disable hover effects
+  //   fontSize: 16,
+  //   fontWeight: 'thin',
+  //   textAlign: 'center',
+  //   color: colours.blue,
+  //   background: colours.offWhite
+  // },
+  // inactiveTabButton: {
+  //   fontSize: 16,
+  //   fontWeight: 'thin',
+  //   textAlign: 'center',
+  //   color: colours.gray,
+  //   background: colours.verylightgray
+  // },
+  tabContainer: {
+    color: colours.blue,
+    background: colours.offWhite,
+    flexDirection: 'row'
+  }
+};
+
+// font-family: ${fonts.default},
+// border: none,
+// text-decoration: none,
+// padding: 14px 16px,
+// button:focus {outline:0;}

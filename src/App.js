@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Sidebar from 'react-sidebar';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Home from './components/home.js';
-import About from './components/about.js';
-import FarmInfo from './components/farmInfo.js';
-import FieldDetails from './components/fieldDetails.js';
+import FarmSummary from './components/farmSummary';
+import About from './components/about';
+import FarmInfo from './components/farmInfo';
+// import FieldDetails from './components/fieldDetails';
 import FieldDetailsContainer from './containers/fieldDetails-container';
-import Help from './components/help.js';
-import Headerbar from './components/general/headerbar.js';
-import Navbar from './components/general/navbar.js';
-import Footer from './components/general/footer.js';
-import { store } from './init-store.js';
-import SlidingBurgerContent from './components/general/sliding-burger.js';
+import Help from './components/help';
+import Headerbar from './components/general/headerbar';
+import Navbar from './components/general/navbar';
+import Footer from './components/general/footer';
+import { store } from './init-store';
+import SlidingBurgerContent from './components/general/sliding-burger';
 import ModalRoot from './containers/modalRoot';
 
 class Routes extends Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       sidebarOpen: false
@@ -42,29 +42,27 @@ class Routes extends Component {
     const sidebarContent = <SlidingBurgerContent onBurgerClick={this.onBurgerClick} />
 
 
-
     return (
-
 
 
       <Router>
         <Sidebar sidebar={sidebarContent}
-             open={this.state.sidebarOpen}
-             onSetOpen={this.onSetSidebarOpen}
-             pullRight
-             shadow
+          open={this.state.sidebarOpen}
+          onSetOpen={this.onSetSidebarOpen}
+          pullRight
+          shadow
         >
           <div>
             <Headerbar onBurgerClick={this.onBurgerClick} />
             <Navbar />
 
             <Switch>
-
-            <Route exact path="/" component={ Home } />
-            <Route path='/farmInfo' component={ FarmInfo } />
-            <Route path='/fieldDetails' component={ FieldDetailsContainer } />
-            <Route path='/about' component={ About } />
-            <Route path='/help' component={ Help } />
+              <Route exact path='/' render={() => <Redirect replace to='/farmSummary' />} />
+              <Route path='/farmSummary' component={ FarmSummary } />
+              <Route path='/farmInfo' component={ FarmInfo } />
+              <Route path='/fieldDetails' component={ FieldDetailsContainer } />
+              <Route path='/about' component={ About } />
+              <Route path='/help' component={ Help } />
 
             </Switch>
 

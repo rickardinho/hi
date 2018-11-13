@@ -1,6 +1,7 @@
 const colours = {
   white: '#ffffff',
-  offWhite: '#efefef',
+  offWhite: '#f7f7f7',
+  verylightgray: '#efefef',
   red: '#e02228',
   black: '#000000',
   blue: '#316AB3', // blue of tabbar
@@ -11,7 +12,6 @@ const colours = {
   darkgray: '#404040',
   gray: '#939598',
   lightgray: 'lightgray',
-  verylightgray: '#f7f7f7',
   orange: '#F58220',
   lightyellow: '#F58220',
   yellow: '#F58220',

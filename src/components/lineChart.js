@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Chart, Axis, Cursor, Tooltip, Series, Line } from 'react-charts';
+// import { Chart, Axis, Cursor, Tooltip, Series, Line } from 'react-charts'; easy charts could be better??? scaling issues?
 import { FlexibleXYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, VerticalBarSeries, LineSeries, DiscreteColorLegend } from 'react-vis';
 import '../../node_modules/react-vis/dist/style.css';
 import colours from '../styles/colours';
