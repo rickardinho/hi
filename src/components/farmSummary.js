@@ -15,7 +15,7 @@ import Grid from './general/grid.js';
 import Summary from './summary.js';;
 
 
-const Home = () => (
+const FarmSummary = () => (
   <div>
 
 
@@ -28,4 +28,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default FarmSummary;

@@ -6,21 +6,17 @@ import 'react-select/dist/react-select.css';
 import { CustomDropdown, CustomDropdownMenu, CustomDropdownToggle, CustomMenuItem } from '../../styles/dropdowns';
 
 
-export default class Combo extends Component {
+export default class FieldCombo extends Component {
 
   render() {
+    const dropdownValue = 'Dusty Field';
 
     const options = [
-      { value: 1, label: 1 },
-      { value: 2, label: 2 },
-      { value: 3, label: 3 },
-      { value: 4, label: 4 },
-      { value: 5, label: 5 },
-      { value: 6, label: 6 },
-      { value: 7, label: 7 },
-      { value: 8, label: 8 },
-      { value: 9, label: 9 },
-      { value: 10, label: 10 }
+      { value: "Dusty Field", label: "Dusty Field" },
+      { value: "Boggy Field", label: "Boggy Field" },
+      { value: "Sandy Field", label: "Sandy Field" },
+      { value: "MuddyField", label: "Muddy Field" }
+
     ];
     const defaultOption = options[this.props.value - 1];
 
@@ -34,7 +30,7 @@ export default class Combo extends Component {
 
       <CustomDropdown>
         <CustomDropdownToggle btnSize="sm" btnStyle="flat">
-            -
+            {dropdownValue}
         </CustomDropdownToggle>
         <CustomDropdownMenu>
             {menuItems}

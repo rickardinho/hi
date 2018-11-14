@@ -60,37 +60,37 @@ const data = [
   }
 ]
 
-const FarmInfo  = () => {
+const FarmInfo = () => {
 
   let mappedTable = data.map((data, i) => {
       return (
-          <TableRow
-              key={ i }
-              index={ i }
-              date={ data.date }
-              sunshine={ data.sunshine }
-              wind={ data.wind }
-              pwl={ data.pwl }
-              rainGaugeData={ data.rainGaugeData }
-              comments={ data.comments }
-          />
+        <TableRow
+          key={ i }
+          index={ i }
+          date={ data.date }
+          sunshine={ data.sunshine }
+          wind={ data.wind }
+          pwl={ data.pwl }
+          rainGaugeData={ data.rainGaugeData }
+          comments={ data.comments }
+        />
       );
   });
 
   return (
+    <MainWrapper>
+
+      <PageTitleDiv>
+        <H3>Farm Information</H3>
+      </PageTitleDiv>
       <MainWrapper>
 
-        <PageTitleDiv>
-          <H3>Farm Information</H3>
-        </PageTitleDiv>
-        <MainWrapper>
+        <HeaderRow rainGaugeNames={ rainGaugeNames }/>
 
-          <HeaderRow rainGaugeNames={ rainGaugeNames }/>
-
-          { mappedTable }
-        </MainWrapper>
-
+        { mappedTable }
       </MainWrapper>
+
+    </MainWrapper>
   );
 };
 
