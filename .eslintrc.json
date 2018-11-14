@@ -42,7 +42,8 @@
       "no-multi-space": "off",
       "no-restricted-globals": 0,
       "react/jsx-first-prop-new-line": 0,
-      "jsx-quotes": ["error", "prefer-single"]
+      "jsx-quotes": ["error", "prefer-single"],
+      "react/jsx-one-expression-per-line": "off"
 
     }
 }

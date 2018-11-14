@@ -35,18 +35,6 @@ const Navbar = () => {
 
         </NavButtonWrapper>
 
-        <NavHelpWrapper>
-
-          <RoutedTabs style={TabContainerStyle}>
-
-            <NavTab to='/help'>
-              Help
-            </NavTab>
-
-          </RoutedTabs>
-
-        </NavHelpWrapper>
-
 
       </NavbarWrapper>
     );

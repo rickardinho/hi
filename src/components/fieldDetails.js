@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 // import Modal from 'react-modal';
-import Combo from './general/combo';
+import FieldCombo from './general/fieldCombo';
 import FieldTableRow from './fieldTableRow';
 import HeaderRow from './detailsHeaderRow';
-import { MainRowWrapper, MainWrapper, PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
+import { InfoRowDiv, Column, SelectorButton, MainRowWrapper, MainWrapper, PageTitleDiv, RowWrapped, P, Pcentered, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, ShowChartButton, BulletDiv } from './../styles/styles';
 
 const customStyles = {
   content : {
@@ -80,23 +80,17 @@ const data = [
   }
 ]
 
-const InfoRow  = ({ rainGaugeName, area, fieldName, crop, soil }) => {
+const InfoRow = ({ rainGaugeName, area, crop, soil }) => {
 
   return (
-      <RowWrapped>
+    <Row>
 
-          <RowWrapped>
-            <div><H4>Raingauge: </H4><Pcentered>{rainGaugeName}</Pcentered></div>
-            <div><H4>Area: </H4><Pcentered>{area}</Pcentered></div>
-          </RowWrapped>
+      <InfoRowDiv><H4>Raingauge: </H4><Pcentered>{rainGaugeName}</Pcentered></InfoRowDiv>
+      <InfoRowDiv><H4>Area: </H4><Pcentered>{area}</Pcentered></InfoRowDiv>
+      <InfoRowDiv><H4>Crop:</H4><Pcentered>{crop}</Pcentered></InfoRowDiv>
+      <InfoRowDiv><H4>Soil:</H4><Pcentered>{soil}</Pcentered></InfoRowDiv>
 
-          <RowWrapped>
-            <div><H4>Field name:</H4><Pcentered>{fieldName}</Pcentered></div>
-            <div><H4>Crop:</H4><Pcentered>{crop}</Pcentered></div>
-            <div><H4>Soil:</H4><Pcentered>{soil}</Pcentered></div>
-          </RowWrapped>
-
-      </RowWrapped>
+    </Row>
   );
 };
 
@@ -117,20 +111,20 @@ class FieldDetails extends Component {
 
   render () {
 
-    let mappedTable = data.map((data, i) => {
-        return (
-            <FieldTableRow
-                key={ i }
-                index={ i }
-                date={ data.date }
-                cropCover={ data.cropCover }
-                adjRainfall={ data.adjRainfall }
-                irrigation={ data.irrigation }
-                smd={ data.smd }
-                drainage={ data.drainage }
-                comments={ data.comments }
-            />
-        );
+    let mappedTable = data.map((dataRow, i) => {
+      return (
+        <FieldTableRow
+          key={ i }
+          index={ i }
+          date={ data.date }
+          cropCover={ data.cropCover }
+          adjRainfall={ data.adjRainfall }
+          irrigation={ data.irrigation }
+          smd={ data.smd }
+          drainage={ data.drainage }
+          comments={ data.comments }
+        />
+      );
     });
 
     return (
@@ -138,11 +132,22 @@ class FieldDetails extends Component {
       <MainWrapper>
         <MainRowWrapper>
           <PageTitleDiv>
-            <H3>Field & Crop Details</H3>
-            <ShowChartButton type="button" onClick={this.showChartModal}>
+            <Column><H4>Field name:</H4>
+              <Row style={{ alignItems: 'center', minWidth: 50, maxWidth: 400 }}>
+                <SelectorButton>{'<'}</SelectorButton>
+
+                <FieldCombo value='fieldName' />
+
+                <SelectorButton>{'>'}</SelectorButton>
+              </Row>
+            </Column>
+            <ShowChartButton type='button' onClick={this.showChartModal}>
               Show Chart
             </ShowChartButton>
+
+
           </PageTitleDiv>
+
         </MainRowWrapper>
         <MainWrapper>
 

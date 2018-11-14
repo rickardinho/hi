@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import '@trendmicro/react-buttons/dist/react-buttons.css';
-import '@trendmicro/react-dropdown/dist/react-dropdown.css';
-import Dropdown, { MenuItem } from '@trendmicro/react-dropdown';
 import colours from './colours';
+
+// Fonts
 
 const fonts = {
   default: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif',
@@ -10,40 +9,8 @@ const fonts = {
   thin: 500
 };
 
-// dropdowns
 
-export const CustomDropdown = styled(Dropdown)`
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-`;
-CustomDropdown.propTypes = Dropdown.propTypes;
-CustomDropdown.defaultProps = Dropdown.defaultProps;
-
-export const CustomDropdownMenu = styled(Dropdown.Menu)`
-
-    width: 100%;
-
-`;
-CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
-CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
-
-export const CustomMenuItem = styled(MenuItem)`
-
-`;
-CustomMenuItem.propTypes = MenuItem.propTypes;
-CustomMenuItem.defaultProps = MenuItem.defaultProps;
-
-export const CustomDropdownToggle = styled(Dropdown.Toggle)`
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-`;
-CustomDropdownToggle.propTypes = Dropdown.Toggle.propTypes;
-CustomDropdownToggle.defaultProps = Dropdown.Toggle.defaultProps;
-
-
-// Main
+// Main Layout
 
 
 export const ChartWrapper = styled.div`
@@ -82,11 +49,8 @@ export const PageTitleDiv = styled.div`
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background: ${colours.lightgray};
-  border-width: 0px;
-  border-color: ${colours.lightgray};
-  border-style: solid;
-  justify-content: space-between;
+  background: ${colours.offWhite};
+  justify-content: center;
 
 `;
 
@@ -117,6 +81,36 @@ export const Row = styled.div`
   border-width: 0px;
   border-color: pink;
   border-style: solid;
+
+
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background: ${colours.offWhite};
+
+
+`;
+
+export const InfoRowDiv = styled.div`
+  display: flex;
+
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.offWhite};
+  border-width: 0px;
+  border-color: pink;
+  border-style: solid;
+
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 
 
 `;
@@ -398,6 +392,26 @@ export const SocialButton = styled.button`
 
 `;
 
+export const SelectorButton = styled.button`
+  margin-bottom: 0px;
+  padding: 5px;
+  width: 30px;
+  font-size: 16px;
+  background: ${colours.offWhite};
+  color: ${colours.blue};
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: ${colours.lightgray};
+  border-style: solid;
+  border-radius: 2px;
+
+  &:hover {
+    background: ${colours.verylightgray};
+    color: ${colours.blue};
+  }
+`;
+
 export const ShowChartButton = styled.button`
   margin: 2px;
   padding: 5px;
@@ -405,6 +419,7 @@ export const ShowChartButton = styled.button`
   color: ${colours.verylightgray};
   right: 0;
   position: absolute;
+  border-radius: 5px;
 
   &:hover {
     background: ${colours.verylightgray};
@@ -452,19 +467,6 @@ export const NavButtonWrapper = styled.div`
 
 `;
 
-export const NavHelpWrapper = styled.div`
-
-  display: flex;
-  flex-direction: row;
-  background: 'blue';
-  position: absolute;
-  right: 0;
-
-  @media (max-width: 600px) {
-    display: none;
-  }
-
-`;
 
 export const BurgerWrapper = styled.div`
   padding: 10px;
