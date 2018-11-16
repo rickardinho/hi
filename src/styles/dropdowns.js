@@ -30,7 +30,7 @@ CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
 CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
 
 export const CustomMenuItem = styled(MenuItem)`
-  border-width: 1px;
+  border-width: 0px;
   border-color: green;
   border-style: solid;
 `;
@@ -41,7 +41,7 @@ export const CustomDropdownToggle = styled(Dropdown.Toggle)`
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-width: 1px;
+    border-width: 0px;
     border-color: red;
     border-style: solid;
 
@@ -53,7 +53,7 @@ export const CustomDropdownMenuWrapper = styled(DropdownMenuWrapper)`
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-width: 1px;
+    border-width: 0px;
     border-color: pink;
     border-style: solid;
 
@@ -65,7 +65,7 @@ export const CustomDropdownButton = styled(DropdownButton)`
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-width: 1px;
+    border-width: 0px;
     border-color: purple;
     border-style: solid;
 
