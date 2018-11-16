@@ -61,12 +61,12 @@ class LineChart extends Component {
     const componentWidth = windowWidth;
 
     return (
-      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', alignItems: 'stretch', justifyContent: 'stretch', borderColor: 'red', borderWidth: 2, borderStyle: 'solid' }}>
-        <div style={{ display: 'flex', flex: 5, flexDirection: 'column', borderColor: 'blue', borderWidth: 2, borderStyle: 'solid' }}>
-          <div style={{ display: 'flex', flex: 1, flexDirection: 'column', borderColor: 'yellow', borderWidth: 2, borderStyle: 'solid' }}>
+      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', alignItems: 'stretch', justifyContent: 'stretch', borderColor: 'red', borderWidth: 0, borderStyle: 'solid' }}>
+        <div style={{ display: 'flex', flex: 5, flexDirection: 'column', borderColor: 'blue', borderWidth: 0, borderStyle: 'solid' }}>
+          <div style={{ display: 'flex', flex: 1, flexDirection: 'column', borderColor: 'yellow', borderWidth: 0, borderStyle: 'solid' }}>
             <FlexibleXYPlot
               width={componentWidth}
-              style={{ borderColor: 'pink', borderWidth: 2, borderStyle: 'solid' }}
+              style={{ borderColor: 'pink', borderWidth: 0, borderStyle: 'solid' }}
             >
               <HorizontalGridLines />
               <VerticalGridLines />
@@ -80,7 +80,7 @@ class LineChart extends Component {
             </FlexibleXYPlot>
           </div>
         </div>
-        <div style={{ flex: 1, alignItems: 'center', justifyContent: 'center', borderColor: 'orange', borderWidth: 2, borderStyle: 'solid' }}>
+        <div style={{ flex: 1, alignItems: 'center', justifyContent: 'center', borderColor: 'orange', borderWidth: 0, borderStyle: 'solid' }}>
           <DiscreteColorLegend orientation="horizontal" items={legendItems} />
         </div>
       </div>

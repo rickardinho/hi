@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
 
       showChartModal: () => {
         dispatch(showModal(MODAL_TYPE_CHART, {
-          title: 'This is a chart modal.'
+          title: 'Soil moisture deficit vs Rainfall'
         }));
       },
       showOtherModal: () => {
