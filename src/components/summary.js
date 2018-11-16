@@ -2,7 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import Combo from './general/combo';
 import TableRow from './summaryTableRow';
-import HeaderRow from './summaryHeaderRow';
+import FieldNameRow from './fieldNameRow';
+import FieldCropRow from './fieldCropRow';
 import { PageTitleDiv, MainWrapper, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
 
 const fieldData = [
@@ -128,33 +129,35 @@ const data = [
   }
 ]
 
-const Summary  = () => {
+const Summary = () => {
 
-  let mappedTable = data.map((data, i) => {
-      return (
-          <TableRow
-              key={ i }
-              index={ i }
-              date={ data.date }
-              fieldData={ data.fieldData }
-          />
-      );
+  const mappedTable = data.map((rowData, i) => {
+    return (
+      <TableRow
+        key={ i }
+        index={ i }
+        date={ rowData.date }
+        fieldData={ rowData.fieldData }
+      />
+    );
   });
 
   return (
+    <MainWrapper>
+
+      <PageTitleDiv />
+
+
       <MainWrapper>
 
-        <PageTitleDiv>
-          <H3>Farm Summary</H3>
-        </PageTitleDiv>
-        <MainWrapper>
+        <FieldNameRow fieldData={ fieldData } />
 
-          <HeaderRow fieldData={ fieldData }/>
+        <FieldCropRow fieldData={ fieldData } />
 
-          { mappedTable }
-        </MainWrapper>
-
+        { mappedTable }
       </MainWrapper>
+
+    </MainWrapper>
   );
 };
 

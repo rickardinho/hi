@@ -1,14 +1,16 @@
 import React from 'react';
-import { CellSm, CellLg, Row, H4 } from '../styles/styles';
+import { CellSm, Row, H4 } from '../styles/styles';
 
 
-const HeaderRow = ({ rainGaugeNames, key, index, date, rainfall, sunshine }) => {
+const FieldCropRow = ({ fieldData }) => {
 
-  const rainGaugeHeaders = rainGaugeNames.map((rainGaugeName) => {
+  const fieldCropHeaders = fieldData.map((field) => {
     return (
+
       <CellSm>
-        <H4>{rainGaugeName}</H4>
+        <H4>{field.crop}</H4>
       </CellSm>
+
     );
   });
 
@@ -17,34 +19,16 @@ const HeaderRow = ({ rainGaugeNames, key, index, date, rainfall, sunshine }) => 
     <Row>
 
       <CellSm>
-        <H4>Date</H4>
+        <H4>Crop:</H4>
       </CellSm>
 
-
-      {rainGaugeHeaders}
-
-
-      <CellSm>
-        <H4>Sun</H4>
-      </CellSm>
-
-      <CellSm>
-        <H4>Wind</H4>
-      </CellSm>
-
-      <CellSm>
-        <H4>Potential water loss (mm)</H4>
-      </CellSm>
-
-      <CellLg>
-        <H4>Comments</H4>
-      </CellLg>
+      {fieldCropHeaders}
 
     </Row>
   );
 };
 
-export default HeaderRow;
+export default FieldCropRow;
 
 // <Row>
 //

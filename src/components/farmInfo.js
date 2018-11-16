@@ -1,11 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
-import Combo from './general/combo';
 import TableRow from './farmInfoTableRow';
 import HeaderRow from './farmInfoHeaderRow';
-import { PageTitleDiv, MainWrapper, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { PageTitleDiv, MainWrapper } from '../styles/styles';
 
-const rainGaugeNames = [ 'Raingauge East', 'Raingauge North', 'Raingauge West', 'Raingauge South' ]
+const rainGaugeNames = ['Raingauge East', 'Raingauge North', 'Raingauge West', 'Raingauge South']
 
 const data = [
   {
@@ -62,7 +60,7 @@ const data = [
 
 const FarmInfo = () => {
 
-  let mappedTable = data.map((data, i) => {
+  const mappedTable = data.map((data, i) => {
       return (
         <TableRow
           key={ i }
@@ -80,12 +78,12 @@ const FarmInfo = () => {
   return (
     <MainWrapper>
 
-      <PageTitleDiv>
-        <H3>Farm Information</H3>
-      </PageTitleDiv>
+      <PageTitleDiv />
+
+
       <MainWrapper>
 
-        <HeaderRow rainGaugeNames={ rainGaugeNames }/>
+        <HeaderRow rainGaugeNames={ rainGaugeNames } />
 
         { mappedTable }
       </MainWrapper>

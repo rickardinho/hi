@@ -129,7 +129,7 @@ export const RowWrapped = styled.div`
 `;
 
 export const CellSm = styled.div`
-  display: flex;
+  display: table-cell;
   width: 10%;
   justify-content: center;
   align-items: center;
@@ -299,10 +299,9 @@ export const LogoWrapper = styled.div`
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
-  border-width: 1px;
+  border-width: 0px;
   border-color: lightgreen;
   border-style: solid;
-
 
 `;
 
@@ -461,9 +460,6 @@ export const NavButtonWrapper = styled.div`
   background: 'blue';
   justify-content: center;
 
-  @media (max-width: 600px) {
-    flex: 1;
-  }
 
 `;
 
@@ -619,8 +615,10 @@ export const NavbarWrapper = styled.section`
 
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   background: ${colours.verylightgray};
   button:focus {outline:0;};
+
 
 `;
 
@@ -698,6 +696,7 @@ export const NavBarStyles = {
     color: colours.blue,
     background: colours.offWhite,
     flexDirection: 'row'
+
   }
 };
 
