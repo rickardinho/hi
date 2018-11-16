@@ -18,7 +18,7 @@ export const ChartWrapper = styled.div`
   flex-direction: column;
 
   flex: 1;
-  border-width: 3px;
+  border-width: 0px;
   border-color: blue;
   border-style: solid;
   height: 100%;

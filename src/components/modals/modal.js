@@ -33,7 +33,7 @@ const Content = styled.div`
   flex-direction: column;
 
   border-color: orange;
-  border-width: 2;
+  border-width: 0;
   border-style: solid;
 
   &:after {
@@ -43,7 +43,7 @@ const Content = styled.div`
     margin-left: -.05em;
     content: '';
     border-color: purple;
-    border-width: 2;
+    border-width: 0;
     border-style: solid;
   }
 `;
@@ -59,14 +59,14 @@ const Dialog = styled.div`
   flex-direction: column;
   margin: 5%;
   border-color: pink;
-  border-width: 2;
+  border-width: 0;
   border-style: solid;
 `;
 
 const Header = styled.div`
   padding: 8px 8px 8px 8px;
   border-color: brown;
-  border-width: 2;
+  border-width: 0;
   border-style: solid;
   flex: 1;
   display: flex;
@@ -80,7 +80,7 @@ const Body = styled.div`
   left: 0;
   flex: 8;
   border-color: green;
-  border-width: 2;
+  border-width: 0;
   border-style: solid;
 
 `;

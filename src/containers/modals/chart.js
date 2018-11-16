@@ -22,7 +22,7 @@ const Chart = ({ title, afterClose, hideModal }) => {
         <CloseButton onClick={onClose}>
           X
         </CloseButton>
-        <div style={{ flex: 1, display: 'flex', borderColor: 'yellow', borderWidth: 2, borderStyle: 'solid'  }}>
+        <div style={{ flex: 1, display: 'flex', borderColor: 'yellow', borderWidth: 0, borderStyle: 'solid'  }}>
           <LineChart />
 
         </div>
