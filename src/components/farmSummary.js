@@ -24,7 +24,6 @@ const FarmSummary = () => (
     </div>
 
 
-
   </div>
 );
 

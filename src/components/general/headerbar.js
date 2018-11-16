@@ -20,25 +20,28 @@ const BurgerIcon = ({onBurgerClick}) => {
 const Headerbar = ({onBurgerClick}) => {
 
     return (
-        <HeaderbarWrapper>
+      <HeaderbarWrapper>
 
-          <LogoWrapper>
+        <LogoWrapper>
 
-              <Row>
-                <H3>Happy Irrigator</H3>
-              </Row>
+          <Row>
+            <H3>Happy Irrigator&nbsp;</H3>
+          </Row>
+          <div style={{ borderRadius: 30, background: 'black', borderStyle: 'solid', borderColor: 'black', borderWidth: 1 }}>
+            <i style={{ fontSize: 24, color: 'yellow' }} className='fas fa-grin' />
+          </div>
+          <Row>
+            <H4>&nbsp;v2.0</H4>
+          </Row>
 
-              <Row>
-                <H4>v2.0</H4>
-              </Row>
 
-          </LogoWrapper>
+        </LogoWrapper>
 
-          <BurgerWrapper>
-            <BurgerIcon onBurgerClick={onBurgerClick}/>
-          </BurgerWrapper>
+        <BurgerWrapper>
+          <BurgerIcon onBurgerClick={onBurgerClick} />
+        </BurgerWrapper>
 
-        </HeaderbarWrapper>
+      </HeaderbarWrapper>
 
     );
 };

@@ -31,9 +31,13 @@ const Navbar = () => {
             <NavTab to='/fieldDetails'>
               Field & Crop Details
             </NavTab>
+
+
           </RoutedTabs>
 
+
         </NavButtonWrapper>
+        <div className='nav-tab-spacer-div' />
 
 
       </NavbarWrapper>
