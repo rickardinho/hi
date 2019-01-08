@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { RoutedTabs, NavTab } from 'react-router-tabs';
 import { NavBarStyles, Row, Block, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, NavHelpWrapper, Logo, LogoName, LogoWrapper, BurgerWrapper } from './../../styles/styles';
 import sparkIcon from './../../images/icons/sparkLogo.png';
@@ -10,10 +11,16 @@ import '../../styles/navigation-tabs.css';
 
 const TabContainerStyle = NavBarStyles.tabContainer;
 
-const Navbar = () => {
+const Navbar = ({ authUser }) =>
+  authUser ? (
+    <NavbarAuth authUser={authUser} />
+  ) : (
+    <NavbarNonAuth />
+  );
 
 
-    return (
+const NavbarAuth = ({ authUser }) => (
+
       <NavbarWrapper>
 
         <NavButtonWrapper>
@@ -41,7 +48,16 @@ const Navbar = () => {
 
 
       </NavbarWrapper>
-    );
-};
+);
 
-export default Navbar;
+const NavbarNonAuth = ({ authUser }) => (
+
+      <div />
+);
+
+
+const mapStateToProps = state => ({
+  authUser: state.sessionState.authUser,
+});
+
+export default connect(mapStateToProps)(Navbar);

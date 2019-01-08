@@ -5,6 +5,7 @@ import { Row, Block, H2, H3, H4, NavButton, NavLabel, HeaderbarWrapper, NavButto
 import sparkIcon from './../../images/icons/sparkLogo.png';
 import sparkName from './../../images/spark2.png';
 import colours from './../../styles/colours';
+import Navigation from '../Navigation';
 
 const BurgerIcon = ({onBurgerClick}) => {
 
@@ -36,6 +37,7 @@ const Headerbar = ({onBurgerClick}) => {
 
 
         </LogoWrapper>
+        <Navigation />
 
         <BurgerWrapper>
           <BurgerIcon onBurgerClick={onBurgerClick} />
