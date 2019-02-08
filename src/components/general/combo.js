@@ -8,7 +8,7 @@ import { CustomDropdown, CustomDropdownMenu, CustomDropdownToggle, CustomMenuIte
 
 export default class Combo extends Component {
 
-  render() {
+  render () {
 
     const options = [
       { value: 1, label: 1 },
@@ -22,7 +22,7 @@ export default class Combo extends Component {
       { value: 9, label: 9 },
       { value: 10, label: 10 }
     ];
-    const defaultOption = options[this.props.value - 1];
+    // const defaultOption = options[this.props.value - 1];
 
     let menuItems = options.map((option, i) => {
         return (

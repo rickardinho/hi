@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import Sidebar from 'react-sidebar';
 // import logo from './logo.svg';
 import './App.css';
 import FarmSummary from './components/farmSummary';
 import About from './components/about';
-import FarmInfo from './components/farmInfo';
+import FarmInfoContainer from './containers/farmInfo-container';
 // import FieldDetails from './components/fieldDetails';
 import FieldDetailsContainer from './containers/fieldDetails-container';
 import Help from './components/help';
 import Headerbar from './components/general/headerbar';
 import Tabbar from './components/Navigation/tabbar';
 import Footer from './components/general/footer';
-import { store } from './init-store';
 import SlidingBurgerContent from './components/general/sliding-burger';
 import ModalRoot from './containers/modalRoot';
 import LandingPage from './components/Landing';
@@ -64,7 +62,7 @@ class Routes extends Component {
         >
           <div>
             <Headerbar onBurgerClick={this.onBurgerClick} />
-            
+
             <Tabbar />
 
 
@@ -83,7 +81,7 @@ class Routes extends Component {
 
               <Route exact path='/' render={() => <Redirect replace to='/farmSummary' />} />
               <Route path='/farmSummary' component={ FarmSummary } />
-              <Route path='/farmInfo' component={ FarmInfo } />
+              <Route path='/farmInfo' component={ FarmInfoContainer } />
               <Route path='/fieldDetails' component={ FieldDetailsContainer } />
               <Route path='/about' component={ About } />
               <Route path='/help' component={ Help } />
@@ -123,4 +121,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withAuthentication(App);

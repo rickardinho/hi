@@ -26,10 +26,11 @@
     border-bottom: 1px solid #f7f7f7;
     cursor: default;
     display: table-cell;
-    
+
 }
 
 .nav-button-spacer-div {
     flex-grow: 1;
     border-bottom: 1px solid #ddd;
+
 }

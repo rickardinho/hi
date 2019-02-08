@@ -1,7 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Link } from 'react-router-dom';
-import { H2, H3, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { H2 } from './../styles/styles';
 
 
 const Help = () => (
@@ -11,7 +9,6 @@ const Help = () => (
         <H2>Help</H2>
       </div>
 
-      
 
       <div>
 

@@ -1,52 +1,51 @@
 import React from 'react';
-import { render } from 'react-dom';
-import colours from './../styles/colours';
 import Combo from './general/combo';
-import { CellSm, CellLg, Block, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { CellSm, CellLg, Row, H4 } from '../styles/styles';
+import TableRowInput from './TableRowInput';
+import RaingaugeInput from './RaingaugeInput';
 
+const TableRow = ({ index, date, raingauges, sunshine, wind, pwl, comments, handleChange, handleChangeRaingauge }) => {
+    console.log('raingauges:', raingauges);
+    const mappedRainGaugeData = raingauges.map((rainGauge, i) => {
+      const raingauge_id = rainGauge.raingauge_id;
+      const rainfall = rainGauge.rainfall;
+      console.log(`raingauge_id: ${raingauge_id}, rainfall: ${rainfall}`);
 
-
-
-const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comments }) => {
-
-    let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
-          <CellSm>
-            <Input value={rainGauge} />
-          </CellSm>
-
-
+        <CellSm key={`mykey ${i}`}>
+          <RaingaugeInput value={rainGauge.rainfall} inputKey={index} raingauge={raingauge_id} dataType='rainfall' handleChangeRaingauge={handleChangeRaingauge} />
+        </CellSm>
 
       );
     });
 
 
   return (
-      <Row>
+    <Row>
 
-          <CellSm>
-            <H4>{date}</H4>
-          </CellSm>
+      <CellSm>
+        <H4>{date}</H4>
+      </CellSm>
 
-          {mappedRainGaugeData}
+      {mappedRainGaugeData}
 
-          <CellSm>
-            <Combo value={wind} />
-          </CellSm>
+      <CellSm>
+        <Combo value={wind} />
+      </CellSm>
 
-          <CellSm>
-            <Combo value={sunshine} />
-          </CellSm>
+      <CellSm>
+        <Combo value={sunshine} />
+      </CellSm>
 
-          <CellSm>
-            <H4>{pwl}</H4>
-          </CellSm>
+      <CellSm>
+        <H4>{pwl}</H4>
+      </CellSm>
 
-          <CellLg>
-            <Input value={comments} />
-          </CellLg>
+      <CellLg>
+        <TableRowInput value={comments} inputKey={index} dataType='comments' handleChangeRaingauge={handleChangeRaingauge} />
+      </CellLg>
 
-      </Row>
+    </Row>
   );
 };
 

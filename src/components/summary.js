@@ -1,13 +1,12 @@
 import React from 'react';
-import { render } from 'react-dom';
-import Combo from './general/combo';
 import TableRow from './summaryTableRow';
 import FieldNameRow from './fieldNameRow';
 import FieldCropRow from './fieldCropRow';
-import { PageTitleDiv, MainWrapper, Div1, Div2, Div3, Row, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import { PageTitleDiv, MainWrapper } from '../styles/styles';
 
 const fieldData = [
   {
+    field_id: 1,
     name: 'Dusty field',
     crop: 'Potatoes, Desiree'
   },
@@ -39,7 +38,7 @@ const fieldData = [
     name: 'Dusty field',
     crop: 'Potatoes, Desiree'
   }
-]
+];
 
 const data = [
   {
@@ -134,7 +133,7 @@ const Summary = () => {
   const mappedTable = data.map((rowData, i) => {
     return (
       <TableRow
-        key={ i }
+        key={ rowData.field_id }
         index={ i }
         date={ rowData.date }
         fieldData={ rowData.fieldData }

@@ -1,21 +1,32 @@
 import { connect } from 'react-redux';
 import FieldDetails from '../components/fieldDetails';
 import { showModal, hideModal } from '../actions/modal';
+import { setValue } from '../actions/fieldData';
 import { MODAL_TYPE_CHART, MODAL_TYPE_OTHER } from '../components/modals/modalTypes';
 
-const mapStateToProps = ({ modal }) => {
-    console.log('modal: ', modal);
+const mapStateToProps = ({ modal, fields }) => {
+  console.log('this.state:', this.state);
+  console.log('this.state.modal:', modal);
+  console.log('this.state.fieldDataState:', fields);
+  return {
+    modal,
+    fields
+  };
 
-    return {
-
-      modal
-
-    };
 };
 
 const mapDispatchToProps = (dispatch) => {
 
     return {
+      handleChange: (text, inputKey, dataType, fieldKey) => {
+        console.log('text: ', text);
+        console.log('inputKey: ', inputKey);
+        console.log('dataType: ', dataType);
+        console.log('fieldKey: ', fieldKey);
+
+        dispatch(setValue(text, inputKey, dataType, fieldKey));
+
+      },
 
       showChartModal: () => {
         dispatch(showModal(MODAL_TYPE_CHART, {

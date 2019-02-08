@@ -7,7 +7,7 @@ const TableRow = ({ key, index, fieldData, date }) => {
   const mappedfieldData = fieldData.map((field, i) => {
     return (
 
-      <CellSm>
+      <CellSm key={`mykey ${field.key}`}>
         <H4>{field.smd}</H4>
       </CellSm>
 

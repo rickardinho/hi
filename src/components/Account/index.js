@@ -217,7 +217,7 @@ class DefaultLoginToggle extends Component {
 const LoginManagement = withFirebase(LoginManagementBase);
 
 const mapStateToProps = state => ({
-  authUser: state.sessionState.authUser,
+  authUser: state.sessionState.authUser
 });
 
 const condition = authUser => !!authUser;

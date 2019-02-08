@@ -6,7 +6,7 @@ const FieldNameRow = ({ fieldData }) => {
   const fieldNameHeaders = fieldData.map((field) => {
     return (
 
-      <CellSm>
+      <CellSm key={`mykey ${field.key}`}>
         <H4>{field.name}</H4>
       </CellSm>
 

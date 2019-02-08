@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import colours from './colours';
 
 // Fonts
@@ -411,6 +412,41 @@ export const SelectorButton = styled.button`
   }
 `;
 
+export const SignoutButton = styled.button`
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: table-cell;
+  padding: 10px 25px;
+  border: 0px none #ddd;
+  text-decoration: none;
+
+  background: #f7f7f7;
+  color: #939598;
+
+  &:hover {
+    background: ${colours.verylightgray};
+    color: ${colours.blue};
+  }
+`;
+
+export const NavLink = styled(Link)`
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: table-cell;
+  padding: 10px 25px;
+  border: 0px none #ddd;
+  text-decoration: none;
+
+  background: #f7f7f7;
+  color: #939598;
+
+  &:hover {
+    background: ${colours.verylightgray};
+    color: ${colours.blue};
+  }
+`;
+
+
 export const ShowChartButton = styled.button`
   margin: 2px;
   padding: 5px;
@@ -560,7 +596,7 @@ export const FooterText = styled.p`
 
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(Link)`
   font-family: ${fonts.default};
   color: ${colours.blue};
   font-size: 12px;
