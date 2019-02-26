@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import FieldDetails from '../components/fieldDetails';
 import { showModal, hideModal } from '../actions/modal';
-import { setValue } from '../actions/fieldData';
+import { setValue, setSelectedField } from '../actions/fieldData';
 import { MODAL_TYPE_CHART, MODAL_TYPE_OTHER } from '../components/modals/modalTypes';
 
 const mapStateToProps = ({ modal, fields }) => {
@@ -10,7 +10,8 @@ const mapStateToProps = ({ modal, fields }) => {
   console.log('this.state.fieldDataState:', fields);
   return {
     modal,
-    fields
+    fields,
+    selected_field_id: fields.selected_field_id
   };
 
 };
@@ -25,6 +26,12 @@ const mapDispatchToProps = (dispatch) => {
         console.log('fieldKey: ', fieldKey);
 
         dispatch(setValue(text, inputKey, dataType, fieldKey));
+
+      },
+
+      setSelectedField: (field_id) => {
+
+        dispatch(setSelectedField(field_id));
 
       },
 

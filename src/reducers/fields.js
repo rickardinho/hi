@@ -55,7 +55,8 @@ export const initialState = {
       ]
     }
   ],
-  isFetchingFieldData: false
+  isFetchingFieldData: false,
+  selected_field_id: 1
 };
 
 export default function fieldsReducer (state = initialState, action) {
@@ -75,6 +76,11 @@ export default function fieldsReducer (state = initialState, action) {
           }
         }
 
+      });
+
+    case actions.SET_SELECTED_FIELD:
+      return update(state, {
+        selected_field_id: { $set: action.data }
       });
 
 

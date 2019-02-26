@@ -10,24 +10,31 @@ export default class FieldCombo extends Component {
 
 
   render () {
-    const { fields, value } = this.props;
+    const { fields, value, onSelect } = this.props;
 
 
     const dropdownValue = value;
 
     const options = fields.map((field) => {
       return (
-        { value: field.field_name, label: field.field_name }
+        { value: field.field_name, label: field.field_name, field_id: field.field_id }
       );
 
     });
 
 
     // const defaultOption = options[this.props.value - 1];
-
+    
     const menuItems = options.map((option, i) => {
         return (
-          <CustomMenuItem key={`myKey ${i}`}>{option.value}</CustomMenuItem>
+          <CustomMenuItem
+            key={`myMenuKey ${option.field_id}`}
+            eventKey={option.field_id}
+            index={i}
+            onSelect={(eventKey) => { onSelect(eventKey); }}
+          >
+            {option.value}
+          </CustomMenuItem>
         );
     });
 

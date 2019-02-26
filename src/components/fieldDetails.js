@@ -36,14 +36,19 @@ class FieldDetails extends Component {
 
   render () {
 
-    const { fields, handleChange } = this.props;
+    const { fields, handleChange, setSelectedField, selected_field_id } = this.props;
 
+    console.log('selected_field_id', fields.selected_field_id);
+    const selectedFieldIndex = fields.fields.findIndex(field => field.field_id === selected_field_id);
+    console.log('selectedFieldIndex', selectedFieldIndex);
     console.log('fields', fields);
-    const selected_field = fields.fields[0];
+    const selected_field = fields.fields[selectedFieldIndex];
+    console.log('selected_field', selected_field);
     const field_data = selected_field.field_data;
-    const fieldKey = 0;
-    // field selection logic here
 
+
+    // field selection logic here
+    console.log('selectedFieldIndex', selectedFieldIndex);
     const mappedTable = field_data.map((dataRow, i) => {
       // console.log('dataRow:', dataRow);
       // console.log('i:', i);
@@ -59,7 +64,7 @@ class FieldDetails extends Component {
           drainage={ dataRow.drainage }
           comments={ dataRow.comments }
           handleChange={ handleChange }
-          fieldKey={fieldKey}
+          fieldKey={selectedFieldIndex}
         />
       );
     });
@@ -73,7 +78,12 @@ class FieldDetails extends Component {
               <Row style={{ alignItems: 'center', minWidth: 50, maxWidth: 400 }}>
                 <SelectorButton>{'<'}</SelectorButton>
 
-                <FieldCombo field_id={selected_field.field_id} fields={fields.fields} value={selected_field.field_name} />
+                <FieldCombo
+                  onSelect={setSelectedField}
+                  field_id={selected_field.field_id}
+                  fields={fields.fields}
+                  value={selected_field.field_name}
+                />
 
                 <SelectorButton>{'>'}</SelectorButton>
               </Row>
