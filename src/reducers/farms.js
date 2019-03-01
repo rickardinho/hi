@@ -65,7 +65,7 @@ export default function farmsReducer (state = initialState, action) {
     case actions.SET_FARM_DATA_VALUE:
       return update(state, {
 
-        farm_data: {
+        farm_data:
           [action.farmKey]: {
             farm_data_values: {
               [action.inputKey]: {
@@ -73,7 +73,7 @@ export default function farmsReducer (state = initialState, action) {
               }
             }
           }
-        }
+
 
       });
 
