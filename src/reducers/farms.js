@@ -53,30 +53,48 @@ export const initialState = {
       ]
     }
   ],
-  farms_is_fetching: false
+  farms_is_fetching: false,
+  farm_raingauges: [
+    {
+      raingauge_id: 1,
+      raingauge_name: 'East'
+    },
+    {
+      raingauge_id: 2,
+      raingauge_name: 'West'
+    }
+  ]
 
 };
+
 
 export default function farmsReducer (state = initialState, action) {
   // console.log('action: ', action);
   switch (action.type) {
 
 
-    case actions.SET_FARM_DATA_VALUE:
-      return update(state, {
+    case actions.SET_FARM_DATA_VALUE: {
 
-        farm_data:
-          [action.farmKey]: {
+      const { farmKey, inputKey, dataType, data } = action.payload;
+      const index = state.farm_data.findIndex((ele) => { // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+        return ele.farm_id.toString() === farmKey.toString();
+      });
+
+      return update(state, {
+        farm_data: {
+          [index]: {
             farm_data_values: {
-              [action.inputKey]: {
-                [action.dataType]: { $set: action.data }
+              [inputKey]: {
+                [dataType]: { $set: data }
               }
             }
           }
-
-
+        }
       });
 
+    }
+
+// check below looks at FarmKey correctly
     case actions.SET_FARM_RAINGAUGE_VALUE:
       return update(state, {
         farm_data: {

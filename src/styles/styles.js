@@ -92,6 +92,9 @@ export const Column = styled.div`
   flex-wrap: nowrap;
   justify-content: space-around;
   background: ${colours.offWhite};
+  border-width: 0px;
+  border-color: orange;
+  border-style: solid;
 
 
 `;
@@ -134,7 +137,7 @@ export const CellSm = styled.div`
   width: 10%;
   justify-content: center;
   align-items: center;
-  background: ${colours.verylightgray};
+  background: ${props => (props.background === null) ? colours.verylightgray : props.background};
   border-width: 1px;
   border-color: ${colours.offWhite};
   border-style: solid;

@@ -8,13 +8,14 @@ export const initialState = {
       field_id: 1,
       field_selected: true,
       field_name: 'Dusty Field',
+      field_crop: 'Potatoes, Desiree',
       field_data: [
         {
           date: '1 Jan',
           cropCover: '1.0',
           adjRainfall: '3.1',
           irrigation: '5.0',
-          smd: '25',
+          smd: '15',
           drainage: '13',
           comments: 'blah blah blah'
         },
@@ -33,13 +34,14 @@ export const initialState = {
       field_id: 2,
       field_selected: false,
       field_name: 'Sandy Field',
+      field_crop: 'Carrots',
       field_data: [
         {
           date: '1 Jan',
           cropCover: '1.0',
           adjRainfall: '3.1',
           irrigation: '5.0',
-          smd: '25',
+          smd: '30',
           drainage: '13',
           comments: 'blah blah blah'
         },
@@ -48,7 +50,7 @@ export const initialState = {
           cropCover: '2.0',
           adjRainfall: '3.1',
           irrigation: '5.0',
-          smd: '25',
+          smd: '10',
           drainage: '13',
           comments: 'blah blah blah'
         }

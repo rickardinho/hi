@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import Sidebar from 'react-sidebar';
 // import logo from './logo.svg';
 import './App.css';
-import FarmSummary from './components/farmSummary';
+import FarmSummaryContainer from './containers/farmSummary-container';
 import About from './components/about';
 import FarmInfoContainer from './containers/farmInfo-container';
 // import FieldDetails from './components/fieldDetails';
@@ -80,7 +80,7 @@ class Routes extends Component {
               <Route path={ROUTES.ADMIN} component={AdminPage} />
 
               <Route exact path='/' render={() => <Redirect replace to='/farmSummary' />} />
-              <Route path='/farmSummary' component={ FarmSummary } />
+              <Route path='/farmSummary' component={ FarmSummaryContainer } />
               <Route path='/farmInfo' component={ FarmInfoContainer } />
               <Route path='/fieldDetails' component={ FieldDetailsContainer } />
               <Route path='/about' component={ About } />

@@ -10,7 +10,8 @@ const mapStateToProps = ({ farms }) => {
   return {
 
     farm_data: farms.farm_data,
-    farms_is_fetching: farms.farms_is_fetching
+    farms_is_fetching: farms.farms_is_fetching,
+    farm_raingauges: farms.farm_raingauges
   };
 
 };
@@ -18,6 +19,16 @@ const mapStateToProps = ({ farms }) => {
 const mapDispatchToProps = (dispatch) => {
 
     return {
+
+      setSelectedValue: (value, inputKey, dataType, farmKey) => {
+        console.log('value: ', value);
+        console.log('inputKey: ', inputKey);
+        console.log('dataType: ', dataType);
+        console.log('farmKey: ', farmKey);
+
+        dispatch(setValue(value, inputKey, dataType, farmKey));
+
+      },
       handleChange: (text, inputKey, dataType) => {
         console.log('text: ', text);
         console.log('inputKey: ', inputKey);

@@ -1,33 +1,20 @@
 import React from 'react';
-import { CellSm, Row, H4 } from '../styles/styles';
+import { CellSm, H4 } from '../styles/styles';
 
-const FieldNameRow = ({ fieldData }) => {
+const FieldCropCell = ({ fieldCrop }) => {
 
-  const fieldNameHeaders = fieldData.map((field) => {
+
     return (
 
-      <CellSm key={`mykey ${field.key}`}>
-        <H4>{field.name}</H4>
+      <CellSm>
+        <H4>{fieldCrop}</H4>
       </CellSm>
 
     );
-  });
-
-
-  return (
-    <Row>
-
-      <CellSm>
-        <H4>Field name:</H4>
-      </CellSm>
-
-      {fieldNameHeaders}
-
-    </Row>
-  );
 };
 
-export default FieldNameRow;
+
+export default FieldCropCell;
 
 // <Row>
 //

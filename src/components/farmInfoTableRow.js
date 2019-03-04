@@ -4,7 +4,7 @@ import { CellSm, CellLg, Row, H4 } from '../styles/styles';
 import TableRowInput from './TableRowInput';
 import RaingaugeInput from './RaingaugeInput';
 
-const TableRow = ({ index, date, raingauges, sunshine, wind, pwl, comments, handleChange, handleChangeRaingauge }) => {
+const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comments, setSelectedValue, handleChange, handleChangeRaingauge }) => {
     console.log('raingauges:', raingauges);
     const mappedRainGaugeData = raingauges.map((rainGauge, i) => {
       const raingauge_id = rainGauge.raingauge_id;
@@ -29,12 +29,19 @@ const TableRow = ({ index, date, raingauges, sunshine, wind, pwl, comments, hand
 
       {mappedRainGaugeData}
 
+
       <CellSm>
-        <Combo value={wind} />
+        <Combo
+          value={sun}
+          onSelect={setSelectedValue}
+          dataType='sun'
+          inputKey={index}
+          farmKey={farmId}
+        />
       </CellSm>
 
       <CellSm>
-        <Combo value={sunshine} />
+        <Combo value={wind} />
       </CellSm>
 
       <CellSm>
@@ -49,7 +56,7 @@ const TableRow = ({ index, date, raingauges, sunshine, wind, pwl, comments, hand
   );
 };
 
-export default TableRow;
+export default FarmTableRow;
 
 // <Div4>
 //   <BarBackground>

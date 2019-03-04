@@ -1,12 +1,16 @@
 export const SET_FARM_DATA_VALUE = 'SET_FARM_DATA_VALUE';
 export const SET_FARM_RAINGAUGE_VALUE = 'SET_FARM_RAINGAUGE_VALUE';
 
-export function setValue (data, inputKey, dataType) {
+export function setValue (data, inputKey, dataType, farmKey) {
+  console.log('setValue: ', `farmKey: ${farmKey}, data${data}`);
   return {
     type: SET_FARM_DATA_VALUE,
-    data,
-    inputKey,
-    dataType
+    payload: {
+      data,
+      inputKey,
+      farmKey,
+      dataType
+    }
   };
 }
 
