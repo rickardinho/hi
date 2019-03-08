@@ -138,11 +138,15 @@ export const CellSm = styled.div`
   justify-content: center;
   align-items: center;
   background: ${props => (props.background === null) ? colours.verylightgray : props.background};
-  border-width: 1px;
-  border-color: ${colours.offWhite};
+  border-width: 0px;
+  border-color: ${colours.orange};
   border-style: solid;
   min-width: 40px;
   max-width: 80px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 
 `;
 
@@ -164,14 +168,17 @@ export const Input = styled.input`
   font-family: ${fonts.default};
   text-align: center;
   margin: 0px;
+  padding: 0px;
   background: ${colours.white};
   font-size: 10px;
-  line-height: 22px;
+
   font-weight: 500;
   border-width: 1px;
   border-color: ${colours.lightgray};
   border-style: solid;
+  border-radius: 3px;
   width: 100%;
+  height: 100%;
 `;
 
 export const DivRainfall = styled.div`
@@ -547,6 +554,28 @@ export const H4 = styled.h4`
   line-height: 22px;
   font-weight: 500;
 
+
+`;
+
+export const T4 = styled.p`
+  font-family: ${fonts.default};
+  text-align: center;
+  margin: 0px;
+  color: ${colours.darkgray};
+  font-size: 10px;
+  line-height: 22px;
+  font-weight: 400;
+
+`;
+
+export const D4 = styled.p`
+  font-family: ${fonts.default};
+  text-align: center;
+  margin: 0px;
+  color: ${colours.darkgray};
+  font-size: 10px;
+  line-height: 22px;
+  font-weight: 400;
 
 `;
 

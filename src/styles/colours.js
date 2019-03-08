@@ -27,7 +27,8 @@ const colours = {
   modalBackground: 'rgba(52, 52, 52, 0.8)',
   headerButtonColor: this.gray,
   headerTitleColor: this.darkgray,
-  heading: this.blue
+  heading: this.blue,
+  caretColor: '#404040'
 };
 
 export default colours;

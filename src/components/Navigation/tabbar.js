@@ -45,17 +45,17 @@ const NavbarAuth = ({ authUser }) => (
 
 
   </NavbarWrapper>
-  
+
 );
 
 const NavbarNonAuth = ({ authUser }) => (
 
-      <div />
+  <div />
 );
 
 
 const mapStateToProps = state => ({
-  authUser: state.sessionState.authUser,
+  authUser: state.sessionState.authUser
 });
 
 export default connect(mapStateToProps)(Navbar);

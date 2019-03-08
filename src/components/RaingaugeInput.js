@@ -1,5 +1,5 @@
 import React from 'react';
-import { CellSm, Input } from '../styles/styles';
+import { Input } from '../styles/styles';
 
 
 const RaingaugeInput = ({ value, inputKey, dataType, handleChangeRaingauge, raingauge }) => {
@@ -7,10 +7,7 @@ const RaingaugeInput = ({ value, inputKey, dataType, handleChangeRaingauge, rain
 
   return (
 
-    <CellSm>
-      <Input type='text' value={value} onChange={text => handleChangeRaingauge(text.target.value, inputKey, dataType, raingauge) } />
-    </CellSm>
-
+    <Input type='text' value={value} onChange={text => handleChangeRaingauge(text.target.value, inputKey, dataType, raingauge) } />
 
   );
 };

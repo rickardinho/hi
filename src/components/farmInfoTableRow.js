@@ -1,5 +1,6 @@
 import React from 'react';
-import Combo from './general/combo';
+import ComboSun from './general/combo-sun';
+import ComboWind from './general/combo-wind';
 import { CellSm, CellLg, Row, H4 } from '../styles/styles';
 import TableRowInput from './TableRowInput';
 import RaingaugeInput from './RaingaugeInput';
@@ -12,8 +13,14 @@ const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comment
       console.log(`raingauge_id: ${raingauge_id}, rainfall: ${rainfall}`);
 
       return (
-        <CellSm key={`mykey ${i}`}>
-          <RaingaugeInput value={rainGauge.rainfall} inputKey={index} raingauge={raingauge_id} dataType='rainfall' handleChangeRaingauge={handleChangeRaingauge} />
+        <CellSm key={`mykey raingauge_id: ${raingauge_id}, date: ${date}`}>
+          <RaingaugeInput
+            value={rainGauge.rainfall}
+            inputKey={index}
+            raingauge={raingauge_id}
+            dataType='rainfall'
+            handleChangeRaingauge={handleChangeRaingauge}
+          />
         </CellSm>
 
       );
@@ -31,7 +38,7 @@ const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comment
 
 
       <CellSm>
-        <Combo
+        <ComboSun
           value={sun}
           onSelect={setSelectedValue}
           dataType='sun'
@@ -41,7 +48,13 @@ const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comment
       </CellSm>
 
       <CellSm>
-        <Combo value={wind} />
+        <ComboWind
+          value={wind}
+          onSelect={setSelectedValue}
+          dataType='wind'
+          inputKey={index}
+          farmKey={farmId}
+        />
       </CellSm>
 
       <CellSm>
