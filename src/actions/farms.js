@@ -14,12 +14,16 @@ export function setValue (data, inputKey, dataType, farmKey) {
   };
 }
 
-export function setRaingaugeValue (data, inputKey, dataType, raingauge) {
+export function setRaingaugeValue (data, inputKey, farmKey, dataType, raingauge, lostFocus) {
   return {
     type: SET_FARM_RAINGAUGE_VALUE,
-    data,
-    inputKey,
-    dataType,
-    raingauge
+    payload: {
+      data,
+      inputKey,
+      farmKey,
+      dataType,
+      raingauge,
+      lostFocus
+    }
   };
 }

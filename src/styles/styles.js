@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import colours from './colours';
+import palette from './palette';
+import { buttonScale } from './scaling';
 
 // Fonts
 
@@ -78,7 +80,7 @@ export const Row = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background: ${colours.offWhite};
+  background: transparent;
   border-width: 0px;
   border-color: pink;
   border-style: solid;
@@ -166,19 +168,21 @@ export const CellLg = styled.div`
 
 export const Input = styled.input`
   font-family: ${fonts.default};
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
+  text-align: left;
+  margin-left: 0px;
+  margin-right: 1px;
+  padding-left: 5px;
+  padding-right: 0px;
   background: ${colours.white};
-  font-size: 10px;
-
-  font-weight: 500;
-  border-width: 1px;
-  border-color: ${colours.lightgray};
+  font-size: 12px;
+  font-weight: 600;
+  border-width: 0px;
+  border-color: ${colours.orange};
   border-style: solid;
-  border-radius: 3px;
-  width: 100%;
-  height: 100%;
+  border-radius: 0px;
+  width: 98%;
+  height: 26px;
+  outline: none;
 `;
 
 export const DivRainfall = styled.div`
@@ -422,22 +426,77 @@ export const SelectorButton = styled.button`
   }
 `;
 
-export const SignoutButton = styled.button`
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  display: table-cell;
-  padding: 10px 25px;
-  border: 0px none #ddd;
-  text-decoration: none;
+export const MenuButton = styled.button`
 
-  background: #f7f7f7;
-  color: #939598;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  border-width: 0;
+  border-color: ${colours.lightgray};
+  border-style: solid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  background: ${colours.white};
+  align-items: center;
+  justify-content: center;
+
 
   &:hover {
     background: ${colours.verylightgray};
     color: ${colours.blue};
   }
 `;
+
+export const DropDownButton = styled.button`
+
+  minWidth: 50px;
+  padding: 0px;
+  margin: 0px;
+  border: 0 solid gray;
+  border-radius: 0px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background: ${colours.white};
+  align-items: center;
+  justify-content: center;
+
+
+  &:hover {
+    background: ${colours.verylightgray};
+    color: ${colours.blue};
+  }
+`;
+
+export const NavButton = styled.button`
+
+  minWidth: 50px;
+  padding: 0px;
+  margin: 0px;
+  border: 0 solid gray;
+  border-radius: 0px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background: ${palette.navButton};
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+
+
+  &:hover {
+    background: ${palette.navButtonHover};
+    color: ${colours.blue};
+  }
+`;
+
 
 export const NavLink = styled(Link)`
   font-family: 'Roboto', sans-serif;
@@ -471,6 +530,24 @@ export const ShowChartButton = styled.button`
     color: ${colours.blue};
   }
 `;
+
+export const ConfirmButton = styled.button`
+  font-family: ${fonts.default};
+  width: 30%;
+  justifyContent: center;
+  alignItems: center;
+  backgroundColor: ${colours.confirm};
+  borderColor: ${colours.confirm};
+  borderWidth: 1;
+  borderRadius: 5;
+  paddingVertical: 8;
+  paddingHorizontal: 10;
+  marginHorizontal: 20;
+  height: 50;
+  elevation: 1;
+  outline: none;
+  box-shadow: 0px 0px 0px ${colours.shadowColour}; // width, height, radius, colour
+`; // confirmButton
 
 export const CloseButton = styled.button`
 
@@ -648,34 +725,22 @@ export const Wrapper = styled.section`
 
 `;
 
-export const NavButton = styled.button`
-  font-family: ${fonts.default};
-  font-size: 12px;
-  font-weight: ${fonts.thin};
-  text-align: center;
-  color: ${colours.blue};
-  background: ${colours.verylightgray};
-  border: none;
-  text-decoration: none;
-  padding: 14px 16px;
-  button:focus {outline:0;};
-
-`;
-
 
 export const NavLabel = styled.label`
 
 `;
 
-export const HeaderbarWrapper = styled.section`
+export const HeaderbarWrapper = styled.div`
 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  background: ${colours.offWhite};
+  background: ${colours.white};
   button:focus {outline:0;};
+  padding-right: 0px;
+  margin-right: 0px;
 
 `;
 

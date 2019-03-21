@@ -32,7 +32,8 @@ export const initialState = {
             }
           ],
           sun: 5,
-          wind: 6
+          wind: 6,
+          comments: ''
         },
         {
           date: '2 Jan',
@@ -69,7 +70,7 @@ export const initialState = {
 
 
 export default function farmsReducer (state = initialState, action) {
-  // console.log('action: ', action);
+  console.log('action: ', action);
   switch (action.type) {
 
 
@@ -94,16 +95,29 @@ export default function farmsReducer (state = initialState, action) {
 
     }
 
-// check below looks at FarmKey correctly
-    case actions.SET_FARM_RAINGAUGE_VALUE:
+
+    case actions.SET_FARM_RAINGAUGE_VALUE: {
+
+      const { inputKey, farmKey, data, raingauge, lostFocus } = action.payload;
+      const farmIndex = state.farm_data.findIndex((ele) => { // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+        return ele.farm_id.toString() === farmKey.toString();
+      });
+
+      const raingaugeIndex = state.farm_data[farmIndex].farm_data_values[inputKey].raingauges.findIndex((ele) => { // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+        return ele.raingauge_id.toString() === raingauge.toString();
+      });
+
+      const validatedData = ((data === '') && (lostFocus === true)) ? 0 : data;
+
+
       return update(state, {
         farm_data: {
-          [action.farmKey]: {
+          [farmIndex]: {
             farm_data_values: {
-              [action.inputKey]: {
+              [inputKey]: {
                 raingauges: {
-                  [action.raingaugeKey]: {
-                    raingauges: { $set: action.data }
+                  [raingaugeIndex]: {
+                    rainfall: { $set: validatedData }
                   }
                 }
               }
@@ -111,6 +125,7 @@ export default function farmsReducer (state = initialState, action) {
           }
         }
       });
+    }
 
 
     default:

@@ -2,7 +2,7 @@ import React from 'react';
 import ComboSun from './general/combo-sun';
 import ComboWind from './general/combo-wind';
 import { CellSm, CellLg, Row, H4 } from '../styles/styles';
-import TableRowInput from './TableRowInput';
+import CommentInput from './CommentInput';
 import RaingaugeInput from './RaingaugeInput';
 
 const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comments, setSelectedValue, handleChange, handleChangeRaingauge }) => {
@@ -17,6 +17,7 @@ const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comment
           <RaingaugeInput
             value={rainGauge.rainfall}
             inputKey={index}
+            farmKey={farmId}
             raingauge={raingauge_id}
             dataType='rainfall'
             handleChangeRaingauge={handleChangeRaingauge}
@@ -62,7 +63,7 @@ const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comment
       </CellSm>
 
       <CellLg>
-        <TableRowInput value={comments} inputKey={index} dataType='comments' handleChangeRaingauge={handleChangeRaingauge} />
+        <CommentInput value={comments} inputKey={index} dataType='comments' handleChange={handleChange} farmKey={farmId} />
       </CellLg>
 
     </Row>

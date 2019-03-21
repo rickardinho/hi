@@ -153,7 +153,9 @@ export default class ComboSun extends Component {
             cursor: 'pointer',
             display: 'flex',
             flexDirection: 'row',
-            background: colours.white
+            background: colours.white,
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
 
         >
@@ -164,7 +166,7 @@ export default class ComboSun extends Component {
             <T4>{dropdownValue}</T4>
           </div>
 
-          <div style={{ width: '30%', height: '100%' }}>
+          <div style={{ width: '30%', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
             <FontAwesomeIcon
               icon={faCaretDown}
               size='sm'

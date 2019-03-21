@@ -29,21 +29,22 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(setValue(value, inputKey, dataType, farmKey));
 
       },
-      handleChange: (text, inputKey, dataType) => {
+      handleChange: (text, inputKey, farmKey, dataType) => {
         console.log('text: ', text);
         console.log('inputKey: ', inputKey);
         console.log('dataType: ', dataType);
 
-        dispatch(setValue(text, inputKey, dataType));
+        dispatch(setValue(text, inputKey, farmKey, dataType));
 
       },
-      handleChangeRaingauge: (text, inputKey, dataType, raingauge) => {
+      handleChangeRaingauge: (text, inputKey, farmKey, dataType, raingauge, lostFocus) => {
         console.log('text: ', text);
         console.log('inputKey: ', inputKey);
+        console.log('farmKey: ', farmKey);
         console.log('dataType: ', dataType);
         console.log('raingauge: ', raingauge);
 
-        dispatch(setRaingaugeValue(text, inputKey, dataType, raingauge));
+        dispatch(setRaingaugeValue(text, inputKey, farmKey, dataType, raingauge, lostFocus));
 
       }
 

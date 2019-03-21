@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { RoutedTabs, NavTab } from 'react-router-tabs';
 import { NavBarStyles, NavbarWrapper, NavButtonWrapper } from '../../styles/styles';
 
@@ -8,15 +7,15 @@ import '../../styles/navigation-tabs.css';
 
 const TabContainerStyle = NavBarStyles.tabContainer;
 
-const Navbar = ({ authUser }) => (
+const Tabbar = ({ authUser }) => (
   authUser ? (
-    <NavbarAuth authUser={authUser} />
+    <TabbarAuth authUser={authUser} />
   ) : (
-    <NavbarNonAuth />
+    <TabbarNonAuth />
   ));
 
 
-const NavbarAuth = ({ authUser }) => (
+const TabbarAuth = ({  }) => (
 
   <NavbarWrapper>
 
@@ -48,14 +47,10 @@ const NavbarAuth = ({ authUser }) => (
 
 );
 
-const NavbarNonAuth = ({ authUser }) => (
+const TabbarNonAuth = ({  }) => (
 
   <div />
 );
 
 
-const mapStateToProps = state => ({
-  authUser: state.sessionState.authUser
-});
-
-export default connect(mapStateToProps)(Navbar);
+export default Tabbar;
