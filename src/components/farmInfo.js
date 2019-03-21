@@ -1,95 +1,88 @@
-import React from 'react';
-import TableRow from './farmInfoTableRow';
+import React, { Component } from 'react';
+import FarmTableRow from './farmInfoTableRow';
 import HeaderRow from './farmInfoHeaderRow';
 import { PageTitleDiv, MainWrapper } from '../styles/styles';
 
-const rainGaugeNames = ['Raingauge East', 'Raingauge North', 'Raingauge West', 'Raingauge South']
+// needs linking
 
-const data = [
-  {
-    date: '1 Jan',
-    wind: 5,
-    sunshine: 4,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
-  },{
-    date: '2 Jan',
-    wind: 2,
-    sunshine: 8,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
-  },{
-    date: '3 Jan',
-    wind: 7,
-    sunshine: 2,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
-  },{
-    date: '4 Jan',
-    wind: 3,
-    sunshine: 4,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
-  },{
-    date: '5 Jan',
-    wind: 2,
-    sunshine: 7,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
-  },{
-    date: '6 Jan',
-    wind: 1,
-    sunshine: 6,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
-  },{
-    date: '7 Jan',
-    wind: 6,
-    sunshine: 4,
-    pwl: 3.2,
-    rainGaugeData: [ 1, 2, 3, 4],
-    comments: 'blah blah blah'
+class FarmInfo extends Component {
+
+  constructor (props) {
+    super(props);
+    console.log('FarmInfo constructor this props', this.props);
   }
-]
 
-const FarmInfo = () => {
 
-  const mappedTable = data.map((data, i) => {
+  render () {
+
+    const { farm_data, farms_is_fetching, farm_raingauges, setSelectedValue, handleChange, handleChangeRaingauge } = this.props;
+
+    if (farm_data === undefined) {
       return (
-        <TableRow
-          key={ i }
-          index={ i }
-          date={ data.date }
-          sunshine={ data.sunshine }
-          wind={ data.wind }
-          pwl={ data.pwl }
-          rainGaugeData={ data.rainGaugeData }
-          comments={ data.comments }
-        />
+        <MainWrapper>
+
+          <PageTitleDiv />
+
+
+          <MainWrapper>
+            <p>No data</p>
+          </MainWrapper>
+
+        </MainWrapper>
       );
-  });
 
-  return (
-    <MainWrapper>
+    }
+    console.log('farm_data', farm_data);
+    // need logic to select farm
+    const selectedFarmDataValues = farm_data[0].farm_data_values;
+    const farmId = farm_data[0].farm_id;
+    console.log('farmId', farmId);
+    console.log('selectedFarmDataValues', selectedFarmDataValues);
+    const rainGaugeNames = farm_raingauges.map((raingauge) => {
+      return (
+        `Raingauge ${raingauge.raingauge_name}`
+      );
+    });
 
-      <PageTitleDiv />
+    const mappedTable = selectedFarmDataValues.map((dataRow, i) => {
 
+        const pwl = dataRow.sun * dataRow.wind // replace with calc logic
+        console.log('dataRow farm: ', dataRow);
+        console.log('dataRow.raingauges farm: ', dataRow.raingauges);
+        return (
+          <FarmTableRow
+            key={ i }
+            index={ i }
+            farmId={ farmId }
+            date={ dataRow.date }
+            sun={ dataRow.sun }
+            wind={ dataRow.wind }
+            pwl={ pwl } // to be calculated
+            raingauges={ dataRow.raingauges }
+            comments={ dataRow.comments }
+            setSelectedValue={ setSelectedValue }
+            handleChange={ handleChange }
+            handleChangeRaingauge={ handleChangeRaingauge }
+          />
+        );
+    });
 
+    return (
       <MainWrapper>
 
-        <HeaderRow rainGaugeNames={ rainGaugeNames } />
+        <PageTitleDiv />
 
-        { mappedTable }
+
+        <MainWrapper>
+
+          <HeaderRow rainGaugeNames={ rainGaugeNames } />
+
+          { mappedTable }
+        </MainWrapper>
+
       </MainWrapper>
-
-    </MainWrapper>
-  );
-};
+    );
+  }
+}
 
 export default FarmInfo;

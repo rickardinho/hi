@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
 import '@trendmicro/react-dropdown/dist/react-dropdown.css';
 import Dropdown, { DropdownButton, MenuItem, DropdownMenuWrapper } from '@trendmicro/react-dropdown';
-// import colours from './colours';
+import colours from './colours';
 
 
 // dropdowns
@@ -22,7 +22,7 @@ CustomDropdown.defaultProps = Dropdown.defaultProps;
 export const CustomDropdownMenu = styled(Dropdown.Menu)`
 
     width: 100%;
-    border-width: 1px;
+    border-width: 0px;
     border-color: blue;
     border-style: solid;
 `;
@@ -30,9 +30,15 @@ CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
 CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
 
 export const CustomMenuItem = styled(MenuItem)`
-  border-width: 1px;
+  border-width: 0px;
   border-color: green;
   border-style: solid;
+  justify-content: center;
+  align-items: center;
+  background: ${colours.offWhite};
+  padding-left: 0px;
+  
+
 `;
 CustomMenuItem.propTypes = MenuItem.propTypes;
 CustomMenuItem.defaultProps = MenuItem.defaultProps;
@@ -41,7 +47,7 @@ export const CustomDropdownToggle = styled(Dropdown.Toggle)`
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-width: 1px;
+    border-width: 0px;
     border-color: red;
     border-style: solid;
 

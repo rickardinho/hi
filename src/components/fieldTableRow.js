@@ -1,44 +1,42 @@
 import React from 'react';
-import { render } from 'react-dom';
-import colours from './../styles/colours';
-import Combo from './general/combo';
-import { CellLg, CellSm, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import TableRowInput from './TableRowInput';
+import { CellLg, CellSm, Row, H4 } from '../styles/styles';
 
 
-const FieldTableRow  = ({ key, index, date, cropCover, adjRainfall, irrigation, smd, drainage, comments }) => {
-
+const FieldTableRow = ({ index, date, cropCover, adjRainfall, irrigation, smd, drainage, comments, handleChange, fieldKey }) => {
+  
   return (
-      <Row>
+    <Row>
 
-          <CellSm>
-            <H4>{date}</H4>
-          </CellSm>
+      <CellSm>
+        <H4>{date}</H4>
+      </CellSm>
 
-          <CellSm>
-            <Input value={cropCover} />
-          </CellSm>
+      <CellSm>
+        <TableRowInput value={cropCover} inputKey={index} dataType='cropCover' handleChange={handleChange} fieldKey={fieldKey} />
+      </CellSm>
 
-          <CellSm>
-            <Input value={adjRainfall} />
-          </CellSm>
+      <CellSm>
+        <TableRowInput value={adjRainfall} inputKey={index} dataType='adjRainfall' handleChange={handleChange} fieldKey={fieldKey} />
+      </CellSm>
 
-          <CellSm>
-            <Input value={irrigation} />
-          </CellSm>
+      <CellSm>
+        <TableRowInput value={irrigation} inputKey={index} dataType='irrigation' handleChange={handleChange} fieldKey={fieldKey} />
+      </CellSm>
 
-          <CellSm>
-            <H4>{smd}</H4>
-          </CellSm>
+      <CellSm>
+        <H4>{smd}</H4>
+      </CellSm>
 
-          <CellSm>
-            <Input value={drainage} />
-          </CellSm>
+      <CellSm>
+        <TableRowInput value={drainage} inputKey={index} dataType='drainage' handleChange={handleChange} fieldKey={fieldKey} />
+      </CellSm>
 
-          <CellLg>
-            <Input value={comments} />
-          </CellLg>
+      <CellLg>
+        <TableRowInput value={comments} inputKey={index} dataType='comments' handleChange={handleChange} fieldKey={fieldKey} />
+      </CellLg>
 
-      </Row>
+    </Row>
   );
 };
 

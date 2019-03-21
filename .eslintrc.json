@@ -43,7 +43,11 @@
       "no-restricted-globals": 0,
       "react/jsx-first-prop-new-line": 0,
       "jsx-quotes": ["error", "prefer-single"],
-      "react/jsx-one-expression-per-line": "off"
+      "react/jsx-one-expression-per-line": "off",
+      "react/jsx-wrap-multilines": "off",
+      "react/no-multi-comp": "off",
+      "react/prefer-stateless-function": "off",
+      "react/destructuring-assignment": "off"
 
     }
 }

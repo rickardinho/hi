@@ -8,7 +8,12 @@ import { CustomDropdown, CustomDropdownMenu, CustomDropdownToggle, CustomMenuIte
 
 export default class Combo extends Component {
 
-  render() {
+
+  render () {
+    const { value, onSelect, dataType, inputKey, farmKey } = this.props;
+
+
+    const dropdownValue = value;
 
     const options = [
       { value: 1, label: 1 },
@@ -22,26 +27,34 @@ export default class Combo extends Component {
       { value: 9, label: 9 },
       { value: 10, label: 10 }
     ];
-    const defaultOption = options[this.props.value - 1];
 
-    let menuItems = options.map((option, i) => {
+
+    // const defaultOption = options[this.props.value - 1];
+
+    const menuItems = options.map((option, i) => {
         return (
-            <CustomMenuItem eventKey={ i }>{option.value}</CustomMenuItem>
+          <CustomMenuItem
+            key={`myMenuKey ${option.value}`}
+            eventKey={option.value}
+            index={i}
+            onSelect={(eventKey) => { onSelect(eventKey, inputKey, dataType, farmKey); }}
+
+          >
+            {option.value}
+          </CustomMenuItem>
         );
     });
 
     return (
 
       <CustomDropdown>
-        <CustomDropdownToggle btnSize="sm" btnStyle="flat">
-            -
+        <CustomDropdownToggle btnSize='sm' btnStyle='flat'>
+          {dropdownValue}
         </CustomDropdownToggle>
         <CustomDropdownMenu>
-            {menuItems}
+          {menuItems}
         </CustomDropdownMenu>
       </CustomDropdown>
-
-
 
     );
   }

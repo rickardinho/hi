@@ -12,6 +12,9 @@ const Overlay = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
   background-color: rgba(0, 0, 0, .65);
 `;
@@ -28,8 +31,9 @@ const Content = styled.div`
   overflow-scrolling: touch;
   padding: 4px;
   cursor: pointer;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
   flex-direction: column;
 
   border-color: orange;
@@ -50,17 +54,21 @@ const Content = styled.div`
 
 
 const Dialog = styled.div`
-  position: relative;
-  height: 90%;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   outline: 0;
   display: flex;
   cursor: default;
   background: white;
   flex-direction: column;
-  margin: 5%;
+  margin: 15%;
   border-color: pink;
   border-width: 0;
   border-style: solid;
+
 `;
 
 const Header = styled.div`

@@ -2,11 +2,11 @@ import React from 'react';
 import { CellSm, CellLg, Row, H4 } from '../styles/styles';
 
 
-const HeaderRow = ({ rainGaugeNames, key, index, date, rainfall, sunshine }) => {
+const HeaderRow = ({ rainGaugeNames, key }) => {
 
-  const rainGaugeHeaders = rainGaugeNames.map((rainGaugeName) => {
+  const rainGaugeHeaders = rainGaugeNames.map((rainGaugeName, i) => {
     return (
-      <CellSm>
+      <CellSm key={`mykey ${i}`}>
         <H4>{rainGaugeName}</H4>
       </CellSm>
     );

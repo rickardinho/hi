@@ -1,56 +1,76 @@
 import React from 'react';
-import { render } from 'react-dom';
-import colours from './../styles/colours';
-import Combo from './general/combo';
-import { CellSm, CellLg, Block, Input, Div1, Div2, Div3, Div4, BlueBar, YellowBar, BarBackground, Row, P, H2, H3, H4, NavButton, NavLabel, NavbarWrapper, NavButtonWrapper, BulletWrapper, ImageDiv, SocialDiv, DownloadDiv, SocialButton, BulletDiv } from './../styles/styles';
+import ComboSun from './general/combo-sun';
+import ComboWind from './general/combo-wind';
+import { CellSm, CellLg, Row, H4 } from '../styles/styles';
+import CommentInput from './CommentInput';
+import RaingaugeInput from './RaingaugeInput';
 
+const FarmTableRow = ({ index, farmId, date, raingauges, sun, wind, pwl, comments, setSelectedValue, handleChange, handleChangeRaingauge }) => {
+    console.log('raingauges:', raingauges);
+    const mappedRainGaugeData = raingauges.map((rainGauge, i) => {
+      const raingauge_id = rainGauge.raingauge_id;
+      const rainfall = rainGauge.rainfall;
+      console.log(`raingauge_id: ${raingauge_id}, rainfall: ${rainfall}`);
 
-
-
-const TableRow  = ({ key, index, date, rainGaugeData, sunshine, wind, pwl, comments }) => {
-
-    let mappedRainGaugeData = rainGaugeData.map((rainGauge, i) => {
       return (
-          <CellSm>
-            <Input value={rainGauge} />
-          </CellSm>
-
-
+        <CellSm key={`mykey raingauge_id: ${raingauge_id}, date: ${date}`}>
+          <RaingaugeInput
+            value={rainGauge.rainfall}
+            inputKey={index}
+            farmKey={farmId}
+            raingauge={raingauge_id}
+            dataType='rainfall'
+            handleChangeRaingauge={handleChangeRaingauge}
+          />
+        </CellSm>
 
       );
     });
 
 
   return (
-      <Row>
+    <Row>
 
-          <CellSm>
-            <H4>{date}</H4>
-          </CellSm>
+      <CellSm>
+        <H4>{date}</H4>
+      </CellSm>
 
-          {mappedRainGaugeData}
+      {mappedRainGaugeData}
 
-          <CellSm>
-            <Combo value={wind} />
-          </CellSm>
 
-          <CellSm>
-            <Combo value={sunshine} />
-          </CellSm>
+      <CellSm>
+        <ComboSun
+          value={sun}
+          onSelect={setSelectedValue}
+          dataType='sun'
+          inputKey={index}
+          farmKey={farmId}
+        />
+      </CellSm>
 
-          <CellSm>
-            <H4>{pwl}</H4>
-          </CellSm>
+      <CellSm>
+        <ComboWind
+          value={wind}
+          onSelect={setSelectedValue}
+          dataType='wind'
+          inputKey={index}
+          farmKey={farmId}
+        />
+      </CellSm>
 
-          <CellLg>
-            <Input value={comments} />
-          </CellLg>
+      <CellSm>
+        <H4>{pwl}</H4>
+      </CellSm>
 
-      </Row>
+      <CellLg>
+        <CommentInput value={comments} inputKey={index} dataType='comments' handleChange={handleChange} farmKey={farmId} />
+      </CellLg>
+
+    </Row>
   );
 };
 
-export default TableRow;
+export default FarmTableRow;
 
 // <Div4>
 //   <BarBackground>

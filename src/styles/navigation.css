@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+.nav-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #f7f7f7;
+    display: table-cell;
+    padding: 10px 25px;
+    color: #939598;
+    border-bottom: 1px none #ddd;
+    text-decoration: none;
+
+}
+
+.nav-button:hover {
+    background-color: oldlace;
+}
+
+.nav-button.active {
+    background-color: #f7f7f7;
+    color: #316AB3;
+    border: 1px solid #ddd;
+    border-top: 2px solid #316AB3;
+    border-bottom: 1px solid #f7f7f7;
+    cursor: default;
+    display: table-cell;
+
+}
+
+.nav-button-spacer-div {
+    flex-grow: 1;
+    border-bottom: 1px solid #ddd;
+
+}
