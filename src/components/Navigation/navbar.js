@@ -5,7 +5,7 @@ import { faSearch, faComments, faQuestion, faUserCircle, faBars } from '@fortawe
 import history from './history';
 import * as ROUTES from '../../constants/routes';
 // import * as ROLES from '../../constants/roles';
-import { NavLink, Row, MenuButton, Column, NavButton, DropDownButton, LogoWrapper } from '../../styles/styles';
+import { Row, MenuButton, Column, NavButton, DropDownButton, LogoWrapper } from '../../styles/styles';
 import { D4, H3, T4 } from '../../styles/text';
 import colours from '../../styles/colours';
 import palette from '../../styles/palette';
@@ -94,50 +94,39 @@ const BurgerIcon = ({ onBurgerClick }) => {
 const MenuTabs = ({ screenWidth }) => {
   const rowItems = (
     <Row>
-      <DropdownMenuValue
-        value='From'
-        dataType='menu'
-        options={[{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }]}
-      />
-      <DropdownMenuValue
-        value='To'
-        dataType='menu'
-        options={[{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }]}
-      />
-      <DropdownMenuValue
-        value='Children'
-        dataType='menu'
-        options={[{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }]}
-      />
-      <Column style={{ width: 30, background: colours.purple, justifyContent: 'center', alignItems: 'center' }}>
+      <NavButton to={ROUTES.FARM_SUMMARY}>
+        <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+          <T4 style={{ }}>Farm Summary</T4>
+        </div>
 
-        <FontAwesomeIcon
-          icon={faSearch}
-          size='x2'
-          style={{ color: colours.white }} />
+      </NavButton>
 
-      </Column>
+      <NavButton to={ROUTES.FARM_INFO}>
+        <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+          <T4 style={{ }}>Farm Information</T4>
+        </div>
+
+      </NavButton>
+
+      <NavButton to={ROUTES.FIELD_DETAILS}>
+        <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+          <T4 style={{ }}>Field & Crop Details</T4>
+        </div>
+      </NavButton>
+
+
     </Row>
   );
 
 
-  const flexibleItems = (
-    <DropdownDateValue
-      value='When do you need a sitter?'
-      dataType='menu'
-      options={[{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }]}
-    />
-
-  );
-
   return (
     (screenWidth < 910)
     ? <Column style={{ flex: 1, borderWidth: 1, borderStyle: 'solid', borderColor: colours.gray }}>
-      {flexibleItems}
+
       {rowItems}
     </Column>
     : <Row style={{ flex: 1, borderWidth: 1, borderStyle: 'solid', borderColor: colours.gray }}>
-      {flexibleItems}
+
       {rowItems}
     </Row>
   );
@@ -224,15 +213,6 @@ const NavigationAuth = ({ firstname, handleLogOut, screenWidth, goToLanding, onB
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', flex: 1, borderWidth: 1, borderStyle: 'solid', borderColor: colours.gray }}>
-
-        <Column onClick={goToLanding} style={{ height: 60, background: colours.purple, cursor: 'pointer' }}>
-
-          <Row style={{ alignItems: 'center', height: '100%', width: 140 }}>
-            <H3 style={{ color: colours.white }}>SitterPoint&nbsp;</H3>
-          </Row>
-
-
-        </Column>
 
         <Row style={{ flex: 5, paddingLeft: 8, paddingRight: 8, borderWidth: 0, borderStyle: 'solid', borderColor: 'green', alignItems: 'center' }}>
 
