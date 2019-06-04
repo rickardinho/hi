@@ -1,5 +1,6 @@
 import update from 'immutability-helper';
 import * as actions from '../actions/farms';
+import undoable, { distinctState } from 'redux-undo';
 
 export const initialState = {
 
@@ -69,7 +70,11 @@ export const initialState = {
 };
 
 
-export default function farmsReducer (state = initialState, action) {
+const undoableFarmsReducer = undoable(farmsReducer, {
+  filter: distinctState()
+});
+
+function farmsReducer (state = initialState, action) {
   console.log('action: ', action);
   switch (action.type) {
 
@@ -132,3 +137,5 @@ export default function farmsReducer (state = initialState, action) {
       return state;
   }
 }
+
+export default undoableFarmsReducer;
