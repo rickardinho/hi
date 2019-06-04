@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FarmTableRow from './farmInfoTableRow';
 import HeaderRow from './farmInfoHeaderRow';
 import { PageTitleDiv, MainWrapper } from '../styles/styles';
+import UndoRedo from '../containers/undo-redo-container';
 
 // needs linking
 
@@ -72,7 +73,7 @@ class FarmInfo extends Component {
 
         <PageTitleDiv />
 
-
+        <UndoRedo />
         <MainWrapper>
 
           <HeaderRow rainGaugeNames={ rainGaugeNames } />
