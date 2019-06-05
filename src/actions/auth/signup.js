@@ -62,7 +62,7 @@ export function signupUser (firstname, surname, email, password) {
             storeUserId(data.user_id);
             storeToken(data.token);
             // initSocket();
-            history.push('uploadPhoto');
+            history.push('dashboard');
 
           } else {
             dispatch(signupUserFailure(data.error));
