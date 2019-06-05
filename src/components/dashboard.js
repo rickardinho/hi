@@ -18,6 +18,11 @@ class Dashboard extends Component {
     return (
       <div>
         <h1>Dashboard</h1>
+        <button type='button' onClick={history.push('farmSummary')}
+        >FarmSummary</button>
+
+        <button type='button' onClick={history.push('farmSummary')}
+        >FarmSetup</button>
 
       </div>
     );
